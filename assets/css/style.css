@@ -28,7 +28,6 @@ p {
     padding: 20px;
     font-size: 1em;
     line-height: 30px;
-    text-align: justify;
     color: #252525;
 }
 
@@ -89,6 +88,14 @@ p {
     position: 20vh;
 }
 
+a {
+    color: white;
+}
+
+a:hover{
+    color: yellow;
+}
+
 /* Questions page layout */
 
 #questions {
@@ -139,6 +146,8 @@ input[type="radio"] {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    width: 20%;
+    margin: auto;
 }
 
 .btn-previous,
@@ -150,8 +159,30 @@ input[type="radio"] {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin: 0 200px;
+    margin: 0 100px;
 }
 
+/*Result area layout*/
 
+#result {
+    position: relative;
+    padding: 0;
+    margin: auto;
+    width: 70%;
+}
 
+.result-area {
+    width: 70%;
+    margin: auto;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #E6ECF0;
+    box-sizing: border-box;
+}
