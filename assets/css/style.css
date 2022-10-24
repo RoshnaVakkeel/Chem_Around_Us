@@ -1,3 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed&display=swap');
+
+/* --------- Global style */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
-    background-color: none;
+    font-family: 'Cabin', sans-serif;
+    background-color: white;
+    color: black;
+    font-Size: 1.2em;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-Size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(10, 10, 70);
+    padding: 10px;
+}
+
+p {
+    font-family: 'Cabin', Sans-Serif;
+    padding: 20px;
+    font-size: 1em;
+    line-height: 30px;
+    text-align: justify;
+    color: #252525;
+}
+
+/*  Heading */
+
+.heading {
+    padding: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* landing article layout */
+#landing {
+    height: auto;
+}
+
+.intro-area {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    padding: 5%;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #E6ECF0;
+    box-sizing: border-box;
+}
+
+.btn-area {
+    height: 200px;
+    margin: 5px auto;
+}
+
+.btn-start {
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
