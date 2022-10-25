@@ -7,6 +7,13 @@
     border: 0;
 }
 
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+}
+
 body {
     font-family: 'Cabin', sans-serif;
     background-color: white;
@@ -42,14 +49,14 @@ p {
 /* landing page layout */
 
 #landing {
-    position:fixed;
-    padding:0;
-    margin:0;
-    top:0;
-    left:0;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background:rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .intro-area {
@@ -67,6 +74,27 @@ p {
     background-color: #E6ECF0;
     box-sizing: border-box;
 }
+
+.login-info {
+    border: none;
+    border: 1px solid #3a3a3a;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px;
+}
+
+#login-submit {
+    width: 10%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #62a5d1;
+    cursor: pointer;
+    outline: none;
+  }
 
 .btn-area {
     height: 100px;
@@ -92,7 +120,7 @@ a {
     color: white;
 }
 
-a:hover{
+a:hover {
     color: yellow;
 }
 
@@ -135,7 +163,7 @@ ul li {
 
 input[type="radio"] {
     margin-right: 20px;
-  }
+}
 
 #btn-submit {
     padding: 10px;
@@ -150,8 +178,7 @@ input[type="radio"] {
     margin: auto;
 }
 
-.btn-previous,
-.btn-next{
+.btn-next {
     background-color: #4b74c0;
     border: none;
     padding: 15px 32px;

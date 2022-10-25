@@ -11,27 +11,90 @@
 
 <body>
 
+    <header>
+        <h1 class="heading">
+            CHEM AROUND US
+        </h1>
+    </header>
+
     <section id="landing">
-    <h1 class="heading">
-        CHEM AROUND US
-    </h1>
+        <div class="intro-area">
+            <div class="intro">
+                <h2>Welcome to CHEM AROUND US Quiz !!</h2>
+                <p>A fun and fact filled questionnaire that will challenge
+                    the way you see everything.
+                    <br> <br>
+                    This quiz consists of Multiple Choice Questions and you can use your best guess and select the
+                    answer using radio buttons.
 
-    <div class="intro-area">
-        <div class="intro">
-            <h2>Welcome to CHEM AROUND US Quiz !!</h2>
-            <p>A fun and fact filled questionnaire that will challenge
-                the way you see everything.
-                <br> <br>
-                This quiz consists of Multiple Choice Questions and you can use your best guess and select the answer using radio buttons.
+                    <br> <br>
+                    Ready to change your perspective. Then enter your login name and click the button below..</p>
 
-                <br> <br>
-                Ready to change your perspective. Then click the button below..</p>
+                    <form id="login-form">
+                        <input type="text" name="username" id="username-field" class="login-info" placeholder="Username">
+                        <input type="submit" value="Submit" id="login-submit">
+                    </form>
+            </div>
         </div>
-    </div>
-    
-    <div class = "btn-area">
-        <button data-type="start" class="btn-start"> <a href="questions.html">Let's Begin!!</a></button>
-    <div>
+
+        <div class="btn-area">
+            <button data-type="start" class="btn-start"> <a href="#question1">Let's Begin!!</a></button>
+            <div>
+    </section>
+
+    <section id="question1">
+        <div class="question-area">
+            <h3>Question 1</h3>
+            <ul class="ul">
+                <li><input type="radio" id="radio1">Answer 1</li>
+                <li><input type="radio" id="radio2">Answer 2</li>
+                <li><input type="radio" id="radio3">Answer 3</li>
+                <li><input type="radio" id="radio4">Answer 4</li>
+            </ul>
+            <label for="submit"></label>
+            <input type="submit" id="btn-submit" name="submit">
+        </div>
+
+        <div class="btn-area">
+            <button data-type="next" class="btn-next">Next</button>
+        </div>
+    </section>
+
+    <section id="question2">
+        <div class="question-area">
+            <h3>Question 2</h3>
+            <ul class="ul">
+                <li><input type="radio" id="radio1">Answer 1</li>
+                <li><input type="radio" id="radio2">Answer 2</li>
+                <li><input type="radio" id="radio3">Answer 3</li>
+                <li><input type="radio" id="radio4">Answer 4</li>
+            </ul>
+            <label for="submit"></label>
+            <input type="submit" id="btn-submit" name="submit">
+        </div>
+
+        <div class="btn-area">
+            <button data-type="next" class="btn-next">Next</button>
+        </div>
+
+    </section>
+
+    <section id="result">
+        <h1 class="heading">CHEM AROUND US</h1>
+
+        </div class="result-area">
+        <div class="score">
+            <h3>Your score is (correct answers/number of questions)!!</h3>
+            <p>Scores are just numbers.</p>
+            <h4>Your Prize: Precious Knowledge!!</h4>
+        </div>
+        </div>
+
+        <div class="btn-area">
+            <button data-type="feedback" class="btn-feedback">Did you enjoy it? Let us know.</button>
+        </div>
+
+    </section>
 
     <script src="assets/js/script.js"></script>
 </body>
