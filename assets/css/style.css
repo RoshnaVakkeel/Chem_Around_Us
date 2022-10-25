@@ -199,22 +199,34 @@ span{
 #result {
     position: relative;
     padding: 0;
-    margin: auto;
-    width: 70%;
+    margin-top: 50px;
 }
 
 .result-area {
     width: 70%;
     margin: auto;
     padding: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.score {
     text-align: center;
     font-size: 1.2em;
     background-color: #E6ECF0;
-    box-sizing: border-box;
+}
+
+#score-title {
+    margin: 1em;
+}
+
+#score {
+   font-size: 1em;
+}
+
+#back-to-quiz {
+    background-color: #4b74c0;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: 20vh;
 }

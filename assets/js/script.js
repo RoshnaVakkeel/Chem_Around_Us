@@ -1,3 +1,8 @@
+/**
+ * Introduce username input event listener.
+ * Add validation to username input 
+ */
+
 let usernameForm = document.getElementById("username-form");
 let usernameButton = document.getElementById("username-submit");
 
