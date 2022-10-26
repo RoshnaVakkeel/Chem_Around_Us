@@ -171,17 +171,6 @@ span{
     border-radius: 1rem;
 }
 
-#btn-submit {
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    margin: auto;
-    color: white;
-    font-weight: bold;
-    background-color: #4ba4e0;
-    border-radius: 5px;
-}
 
 .btn-next {
     background-color: #4b74c0;

@@ -10,12 +10,15 @@ usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
     let username = usernameForm.username.value;
 
-    if (username.length < 3) {
+    if (username == null || username == "") {
+        alert("Please enter your Username!");
+    } else if (username.length < 3) {
         alert("Username must be atleast 3 charactrs long, Please Try Again!");
     } else {
         alert("Your name is saved!!");
     }
 })
+console.log(username);
 
 //Questions list for quiz-box (arrays)
 
@@ -59,3 +62,7 @@ function loadQuestion() {
     option2.innerHTML = questionList[i].option[2];
     option3.innerHTML = questionList[i].option[3];
 }
+
+/**
+ * Submit button activation to change the questions
+ */
