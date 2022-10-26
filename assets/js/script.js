@@ -6,6 +6,7 @@
 let usernameForm = document.getElementById("username-form");
 let usernameButton = document.getElementById("username-submit");
 
+
 usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
     let username = usernameForm.username.value;
@@ -13,12 +14,17 @@ usernameButton.addEventListener("click", (e) => {
     if (username == null || username == "") {
         alert("Please enter your Username!");
     } else if (username.length < 3) {
-        alert("Username must be atleast 3 charactrs long, Please Try Again!");
+        alert("Username must be atleast 3 characters long, Please Try Again!");
     } else {
         alert("Your name is saved!!");
     }
 })
-console.log(username);
+
+/**
+ * btn-next / Let's Begin button condition
+ * so that it doesn't work if username is not entered.
+ */
+
 
 //Questions list for quiz-box (arrays)
 
@@ -63,6 +69,20 @@ function loadQuestion() {
     option3.innerHTML = questionList[i].option[3];
 }
 
+loadQuestion()
+
 /**
- * Submit button activation to change the questions
+ * Function to check answers and calculate scores
  */
+
+ let score = document.getElementById ('score');
+ 
+ function calcScore(e){
+    
+ }
+
+/**
+ * Function to change the questions abd display the next
+ */
+
+
