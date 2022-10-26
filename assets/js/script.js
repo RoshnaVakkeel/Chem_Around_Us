@@ -21,6 +21,14 @@ usernameButton.addEventListener("click", (e) => {
 })
 
 /**
+ * Save user's name to the 
+ */
+function saveUserData() {
+    let name = document.getElementById ("username-field").value;
+    console.log("users value is: " + name);
+ }
+
+/**
  * btn-next / Let's Begin button condition
  * so that it doesn't work if username is not entered.
  */
