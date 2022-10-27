@@ -22,7 +22,7 @@ usernameButton.addEventListener("click", (e) => {
 })
 
 /**
- * Save user's name to the 
+ * Save user's name 
  */
 function saveUserData() {
     let name = document.getElementById("username-field").value;
@@ -34,6 +34,9 @@ function saveUserData() {
  * so that it doesn't work if username is not entered.
  */
 
+/**
+ * Defines "Let's Begin Button click event"
+ */
 
 let buttonStart = document.getElementById("btn-start");
 let quizBox = document.getElementById('quiz-box');
@@ -44,7 +47,8 @@ buttonStart.addEventListener ('click', letsBegin)
 function letsBegin(){
 console.log ('Let us Begin!');
 landingSection.style.display = 'none';
-quizBox.classList.remove('hide');
+quizBox.style.display = 'block';
+loadQuestion();
 }
 
 //Questions list for quiz-box (arrays)
@@ -67,7 +71,16 @@ let questionList = [
         option: ['Dioxygen', 'Trioxygen', 'Oxygen and Hydrogen', 'Methane gas'],
         answer: 'Trioxygen'
     },
-    
+    {
+        question: 'Which gas cannot freeze at atmospheric pressure?',
+        option: ['Nitrogen', 'Oxygen', 'Helium', 'Argon'],
+        answer: 'Helium'
+    },
+    {
+        question: 'What happens to the volume of water upon freezing?',
+        option: ['Volume decreases', 'Volume increases', 'Remains same', 'Increases then decreases'],
+        answer: 'Volume increases'
+    },
 
 ]
 
@@ -113,11 +126,11 @@ function loadQuestion() {
     } else {
         quizBox.style.display = 'none';
         score.innerHTML = score + '/'+ questionList.length;
+        result.classList.remove ('hide');
         resultArea.style.display = 'block';
     }
 }
 
-loadQuestion()
 
 
 /**

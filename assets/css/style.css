@@ -95,7 +95,7 @@ p {
     background-color: #4ba4e0;
     cursor: pointer;
     outline: none;
-  }
+}
 
 .btn-area {
     height: 100px;
@@ -132,8 +132,7 @@ a:hover {
 }
 
 #quiz-box {
-    position: relative;
-    padding-top: 50px;
+    position: relative padding-top: 50px;
     margin: 0;
     top: 0;
     left: 0;
@@ -152,24 +151,24 @@ a:hover {
     flex-direction: column;
 }
 
-#question{
+#question {
     margin-bottom: 3rem;
     padding-left: 20px;
     padding-top: 20px;
 }
 
-.option{
+.option {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 20rem;
     background: lightblue;
 }
 
-ol{
+ol {
     padding: 0 4rem;
 }
 
-span{
+span {
     display: block;
     padding: 0.1rem 0.7rem;
     border-radius: 1rem;
@@ -209,7 +208,7 @@ span{
 }
 
 #score {
-   font-size: 1em;
+    font-size: 1em;
 }
 
 #back-to-quiz {
