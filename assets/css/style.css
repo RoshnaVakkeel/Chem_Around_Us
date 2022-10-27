@@ -105,7 +105,7 @@ p {
     align-items: center;
 }
 
-.btn-start {
+#btn-start {
     background-color: #4b74c0;
     border: none;
     padding: 15px 32px;
@@ -172,7 +172,7 @@ span{
 }
 
 
-.btn-next {
+#btn-next {
     background-color: #4b74c0;
     border: none;
     padding: 15px 32px;
@@ -191,7 +191,7 @@ span{
     margin-top: 50px;
 }
 
-.result-area {
+#result-area {
     width: 70%;
     margin: auto;
     padding: 1%;
