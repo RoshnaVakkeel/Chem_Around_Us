@@ -127,6 +127,10 @@ a:hover {
 
 /* Questions page layout */
 
+.hide {
+    display: none;
+}
+
 #quiz-box {
     position: relative;
     padding-top: 50px;

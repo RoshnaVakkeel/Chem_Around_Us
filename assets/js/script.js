@@ -1,3 +1,4 @@
+
 /**
  * Introduce username input event listener.
  * Add validation to username input 
@@ -32,29 +33,31 @@ function saveUserData() {
  * btn-next / Let's Begin button condition
  * so that it doesn't work if username is not entered.
  */
+
+
 let buttonStart = document.getElementById("btn-start");
-let introArea = document.getElementById ('intro-area')
+let quizBox = document.getElementById('quiz-box');
+let landingSection = document.getElementById('landing');
 
-function btnStart() {
-    quizBox.style.display = 'block';
-    introArea.style.display = 'none';
+buttonStart.addEventListener ('click', letsBegin)
 
-    buttonStart.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        if (`$name` == null || `$name` == "") {
-            alert("Please enter your Username!");
-        } else {
-            throw ("Aborting!");
-        }
-    })
+function letsBegin(){
+console.log ('Let us Begin!');
+landingSection.style.display = 'none';
+quizBox.classList.remove('hide');
 }
 
 //Questions list for quiz-box (arrays)
 
 let question = document.getElementById('question');
 
-let questionList = [{
+let questionList = [
+    {
+        question: 'Diamond is made of which element?',
+        option: ['Alloy of phosphorus and carbon', 'Carbon and phosphorus', 'Phosphorous', 'Carbon'],
+        answer: 'Carbon'
+    },
+    {
         question: 'What makes over 99% of the matter in the universe?',
         option: ['Helium and Hydrogen', 'Nitrogen and Hydrogen', 'Oxygen and Nitrogen', 'Oxygen and Hydrogen'],
         answer: 'Helium and Hydrogen'
@@ -64,11 +67,7 @@ let questionList = [{
         option: ['Dioxygen', 'Trioxygen', 'Oxygen and Hydrogen', 'Methane gas'],
         answer: 'Trioxygen'
     },
-    {
-        question: 'Diamond is made of which element?',
-        option: ['Alloy of phosphorus and carbon', 'Carbon and phosphorus', 'Phosphorous', 'Carbon'],
-        answer: 'Carbon'
-    },
+    
 
 ]
 
@@ -77,7 +76,7 @@ let questionList = [{
  * Loads and updates questions in the quiz-box
  */
 
-let quizBox = document.getElementById('quiz-box');
+
 let questionArea = document.getElementById('question-area')
 let spanAll = document.querySelectorAll('span');
 console.log(spanAll)
@@ -114,7 +113,7 @@ function loadQuestion() {
     } else {
         quizBox.style.display = 'none';
         score.innerHTML = score + '/'+ questionList.length;
-        resultArea.style.display = 'block'
+        resultArea.style.display = 'block';
     }
 }
 
