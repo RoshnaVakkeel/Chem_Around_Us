@@ -13,11 +13,11 @@
 
     <header>
         <h1 class="heading">
-            CHEM AROUND US 
+            CHEM AROUND US
         </h1>
     </header>
 
-    <section id="landing" >
+    <section id="landing">
         <div class="intro-area">
             <div class="intro">
                 <h2>Welcome to CHEM AROUND US Quiz !!</h2>
@@ -32,25 +32,25 @@
 
                 <form id="username-form">
                     <input type="text" name="username" id="username-field" class="username-info" placeholder="Username">
-                    <input type="submit" value="Submit" id="username-submit" onclick="saveUserData()">
+                    <input type="submit" value="Submit" id="username-submit">
                 </form>
 
             </div>
         </div>
 
         <div class="btn-area">
-            <button data-type="start" class = "hide" id="btn-start" onclick="letsBegin()"> Let's Begin!!</a></button>
+            <button data-type="start" id="btn-start" class="hide" onclick="letsBegin()"> Let's Begin!!</a></button>
             <div>
     </section>
 
     <section id="quiz-box" class="hide">
         <div class="question-area">
             <h4 id="question">Question</h4>
-            <ol type="A">
-                <li class="option"> <span id="option0" onclick= "scoreCalc(this)">Answer 1</span></li>
-                <li class="option"> <span id="option1" onclick= "scoreCalc(this)">Answer 2</span></li>
-                <li class="option"><span id="option2" onclick= "scoreCalc(this)">Answer 3</span></li>
-                <li class="option"><span id="option3" onclick= "scoreCalc(this)">Answer 4</span></li>
+            <ol id="options" type="A">
+                <li class="option"><button id="option0" onclick="scoreCalc(this)"></button></li>
+                <li class="option"><button id="option1" onclick="scoreCalc(this)"></button></li>
+                <li class="option"><button id="option2" onclick="scoreCalc(this)"></button></li>
+                <li class="option"><button id="option3" onclick="scoreCalc(this)"></button></li>
             </ol>
         </div>
 
@@ -68,7 +68,7 @@
         </div>
 
         <div class="btn-area">
-            <button data-type="back" id="back-to-quiz">Back to Quiz Start</button>
+            <button data-type="back" id="back-to-quiz" onclick="backToQuiz()">Back to Quiz Start</button>
         </div>
 
     </section>

@@ -9,15 +9,13 @@ let usernameButton = document.getElementById("username-submit");
 usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
     let username = usernameForm.username.value;
-    var usernameValue = /^[A-Za-z]+$/;
 
     if (username == null || username == "") {
         alert("Please enter your name!!")
-        throw ("I am sorry! You cannot proceed!");
     } else if (username.length < 3) {
         alert("Username must be atleast 3 characters long, Please Try Again!");
     } else {
-        alert( "Hey " + username+ " ! Welcome to the Quiz!!");
+      //  alert( "Hey " + username+ " ! Welcome to the Quiz!!");
         buttonStart.classList.remove('hide');
     }
 })
@@ -75,16 +73,16 @@ let questionList = [{
 
 
 let questionArea = document.getElementById('question-area')
-let spanAll = document.querySelectorAll('span');
-console.log(spanAll)
+let spanAll = document.getElementsByClassName('option');
 
 let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
 let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
-let i = 0;
 
+let i = 0;
 function loadQuestion() {
+   
     for (let a = 0; a < spanAll.length; a++) {
         spanAll[a];
     }
@@ -101,31 +99,56 @@ function loadQuestion() {
 
 let buttonNext = document.getElementById('btn-next');
 let resultArea = document.getElementById('result-area');
-let score = document.getElementById('score');
+let scoreValue = document.getElementById('score');
 
 function nextQuestion() {
+    option0.disabled = false;
+    option1.disabled = false;
+    option2.disabled = false;
+    option3.disabled = false;
     if (i < questionList.length - 1) {
         i = i + 1;
         loadQuestion();   
     } else {
         quizBox.style.display = 'none';
-        score.innerHTML = score + '/' + questionList.length;
+        score.innerHTML = scoreValue + '/' + questionList.length;
         result.classList.remove('hide');
         resultArea.style.display = 'block';
+    }
+}
+
+/**
+ * Function to select answers and calculate scores
+ */
+
+
+function scoreCalc(e){
+  console.log(option0.disabled, "<==op 0")
+   option0.disabled = true;
+   option1.disabled = true;
+   option2.disabled = true;
+   option3.disabled = true;
+
+    if (e.innerHTML === questionList[i].answer) {
+        score.innerHTML = scoreValue + '/' + questionList.length;
+        
+        document.getElementById(e.id).style.background = 'green';
+    } else {
+        document.getElementById(e.id).style.background = 'red';
     }
 }
 
 
 
 /**
- * Function to check answers and calculate scores
+ * When user clecks the "back to quiz" button, user lands on the first question
  */
+let returnToQuiz = document.getElementById ('back-to-quiz');
 
-function scoreCalc(event) {
-    if (event.innerHTML === questionList[i].answer) {
-        score = score + 1;
-        document.getElementById(event.id).style.background = 'green';
-    } else {
-        document.getElementById(event.id).style.background = 'red';
-    }
-}
+returnToQuiz.addEventListener('click', backToQuiz, true)
+
+function backToQuiz() {
+    result.classList.add('hide');
+    quizBox.style.display = 'block';
+    loadQuestion();
+ }

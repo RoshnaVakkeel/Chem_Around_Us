@@ -156,7 +156,7 @@ a:hover {
     padding-top: 20px;
 }
 
-.option {
+.option  button {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 20rem;
@@ -164,16 +164,10 @@ a:hover {
     border-radius: 1rem;
 }
 
+
 ol {
     padding: 0 4rem;
 }
-
-span {
-    display: block;
-    padding: 0.1rem 0.7rem;
-    border-radius: 1rem;
-}
-
 
 #btn-next {
     background-color: #4b74c0;
