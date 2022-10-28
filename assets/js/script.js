@@ -9,28 +9,18 @@ let usernameButton = document.getElementById("username-submit");
 usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
     let username = usernameForm.username.value;
+    var usernameValue = /^[A-Za-z]+$/;
 
     if (username == null || username == "") {
-        alert("Please enter your Username!");
+        alert("Please enter your name!!")
+        throw ("I am sorry! You cannot proceed!");
     } else if (username.length < 3) {
         alert("Username must be atleast 3 characters long, Please Try Again!");
     } else {
-        alert("Your name is saved!!");
+        alert( "Hey " + username+ " ! Welcome to the Quiz!!");
+        buttonStart.classList.remove('hide');
     }
 })
-
-/**
- * Save user's name 
- */
-function saveUserData() {
-    let name = document.getElementById("username-field").value;
-    console.log("users value is: " + name);
-}
-
-/**
- * btn-next / Let's Begin button condition
- * so that it doesn't work if username is not entered.
- */
 
 /**
  * Defines "Let's Begin Button click event"
@@ -43,7 +33,6 @@ let landingSection = document.getElementById('landing');
 buttonStart.addEventListener('click', letsBegin)
 
 function letsBegin() {
-    console.log('Let us Begin!');
     landingSection.style.display = 'none';
     quizBox.style.display = 'block';
     loadQuestion();

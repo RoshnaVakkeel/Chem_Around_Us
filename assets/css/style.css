@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed&display=swap');
 
-/* --------- Global style */
+/* Global style */
 * {
     margin: 0;
     padding: 0;
@@ -132,7 +132,6 @@ a:hover {
 }
 
 #quiz-box {
-    position: relative padding-top: 50px;
     margin: 0;
     top: 0;
     left: 0;
@@ -162,6 +161,7 @@ a:hover {
     font-size: 1.2rem;
     width: 20rem;
     background: lightblue;
+    border-radius: 1rem;
 }
 
 ol {
