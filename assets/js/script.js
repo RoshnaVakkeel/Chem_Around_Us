@@ -1,4 +1,3 @@
-
 /**
  * Introduce username input event listener.
  * Add validation to username input 
@@ -6,7 +5,6 @@
 
 let usernameForm = document.getElementById("username-form");
 let usernameButton = document.getElementById("username-submit");
-
 
 usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -42,21 +40,20 @@ let buttonStart = document.getElementById("btn-start");
 let quizBox = document.getElementById('quiz-box');
 let landingSection = document.getElementById('landing');
 
-buttonStart.addEventListener ('click', letsBegin)
+buttonStart.addEventListener('click', letsBegin)
 
-function letsBegin(){
-console.log ('Let us Begin!');
-landingSection.style.display = 'none';
-quizBox.style.display = 'block';
-loadQuestion();
+function letsBegin() {
+    console.log('Let us Begin!');
+    landingSection.style.display = 'none';
+    quizBox.style.display = 'block';
+    loadQuestion();
 }
 
 //Questions list for quiz-box (arrays)
 
 let question = document.getElementById('question');
 
-let questionList = [
-    {
+let questionList = [{
         question: 'Diamond is made of which element?',
         option: ['Alloy of phosphorus and carbon', 'Carbon and phosphorus', 'Phosphorous', 'Carbon'],
         answer: 'Carbon'
@@ -78,12 +75,10 @@ let questionList = [
     },
     {
         question: 'What happens to the volume of water upon freezing?',
-        option: ['Volume decreases', 'Volume increases', 'Remains same', 'Increases then decreases'],
-        answer: 'Volume increases'
+        option: ['decreases', 'increases', 'Remains same', 'Increases then decreases'],
+        answer: 'increases'
     },
-
 ]
-
 
 /**
  * Loads and updates questions in the quiz-box
@@ -114,19 +109,19 @@ function loadQuestion() {
 /**
  * Function to change the questions and display the next
  */
- 
- let buttonNext= document.getElementById ('btn-next');
- let resultArea = document.getElementById ('result-area');
- let score = document.getElementById('score');
 
- function nextQuestion() {
+let buttonNext = document.getElementById('btn-next');
+let resultArea = document.getElementById('result-area');
+let score = document.getElementById('score');
+
+function nextQuestion() {
     if (i < questionList.length - 1) {
         i = i + 1;
-        loadQuestion();
+        loadQuestion();   
     } else {
         quizBox.style.display = 'none';
-        score.innerHTML = score + '/'+ questionList.length;
-        result.classList.remove ('hide');
+        score.innerHTML = score + '/' + questionList.length;
+        result.classList.remove('hide');
         resultArea.style.display = 'block';
     }
 }
@@ -137,5 +132,11 @@ function loadQuestion() {
  * Function to check answers and calculate scores
  */
 
-
-
+function scoreCalc(event) {
+    if (event.innerHTML === questionList[i].answer) {
+        score = score + 1;
+        document.getElementById(event.id).style.background = 'green';
+    } else {
+        document.getElementById(event.id).style.background = 'red';
+    }
+}
