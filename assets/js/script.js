@@ -14,6 +14,8 @@ usernameButton.addEventListener("click", (e) => {
         alert("Please enter your name!!")
     } else if (username.length < 3) {
         alert("Username must be atleast 3 characters long, Please Try Again!");
+    } else if (username.value !== /^[a-zA-Z0-9.\-_$@*!]{3,30}$/) {
+        alert("Only letters please!");
     } else {
       //  alert( "Hey " + username+ " ! Welcome to the Quiz!!");
         buttonStart.classList.remove('hide');
