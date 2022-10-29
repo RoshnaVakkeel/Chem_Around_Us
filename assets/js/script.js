@@ -32,7 +32,6 @@ usernameButton.addEventListener("click", (e) => {
 
 
 
-
 /**
  * Defines "Let's Begin Button click event"
  */
@@ -84,9 +83,8 @@ let questionList = [{
  * Loads and updates questions in the quiz-box
  */
 
-
 let questionArea = document.getElementById('question-area')
-let spanAll = document.getElementsByClassName('option');
+let optionAll = document.getElementsByClassName('option');
 
 let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
@@ -96,8 +94,8 @@ let option3 = document.getElementById('option3');
 let i = 0;
 function loadQuestion() {
    
-    for (let a = 0; a < spanAll.length; a++) {
-        spanAll[a];
+    for (let a = 0; a < optionAll.length; a++) {
+        optionAll[a];
     }
     question.innerHTML = (i + 1) + '.' + '     ' + questionList[i].question;
     option0.innerHTML = questionList[i].option[0];
@@ -113,6 +111,7 @@ function loadQuestion() {
 let buttonNext = document.getElementById('btn-next');
 let resultArea = document.getElementById('result-area');
 let scoreValue = document.getElementById('score');
+scoreValue= 0;
 
 function nextQuestion() {
     option0.disabled = false;
@@ -124,9 +123,9 @@ function nextQuestion() {
         loadQuestion();   
     } else {
         quizBox.style.display = 'none';
-        score.innerHTML = scoreValue + '/' + questionList.length;
+        scoreValue.innerHTML = scoreValue + '/' + questionList.length;
         result.classList.remove('hide');
-        resultArea.style.display = 'block';
+        resultArea.style.display = 'block';     
     }
 }
 
@@ -142,13 +141,15 @@ function scoreCalc(e){
    option2.disabled = true;
    option3.disabled = true;
 
-    if (e.innerHTML === questionList[i].answer) {
+
+    if (e.innerHTML === questionList[i].answer  && scoreValue<questionList.length) {
         score.innerHTML = scoreValue + '/' + questionList.length;
         
         document.getElementById(e.id).style.background = 'green';
     } else {
         document.getElementById(e.id).style.background = 'red';
     }
+
 }
 
 
