@@ -3,8 +3,8 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
 ## CONTENTS
 
-### USER EXPERIENCE UX
-- ### User Stories
+<a href= "#ux">USER EXPERIENCE UX </a> 
+- <a href= "#us"> User Stories </a>
     - #### First Time Visitor Goals
     - #### Returning Visitor Goals
 - ### Design
@@ -48,10 +48,8 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
 <br>
 
-## USER EXPERIENCE UX
-***
-## User Stories
-***
+<h2 id = "ux"> USER EXPERIENCE UX </h2>
+<h3 id = "us"> User Stories </h3>
 
 ### First Time Visitor Goals
 - As a student who is looking for a quiz, I want to solve challenges in the quiz that are inspired from academia, so that it helps me learn new concepts.
@@ -82,7 +80,6 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 - ### Accessibility
 
 ## TECHNOLOGIES
-***
 ### Languages Used
 This quiz is created  using HTML5, CSS3 and JavaScript.
 
@@ -91,10 +88,9 @@ This quiz is created  using HTML5, CSS3 and JavaScript.
 - GitHub - To create my repositories, save and store my project files
 - Google Fonts - To import fonts
 - Font Awesome - For the iconography used in footer and links
-- Google Dev Tools - To debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
+- Google Dev Tools - To debug, troubleshoot and test features and adjust property values. Using the  Lighthouse extension installed in Chrome Browser, the performance report was generated.
 
 ## ISSUES AND FIXES
-***
 ## TESTING 
 - ### Validation
     - ### W3C Validator (HTML)
@@ -109,14 +105,12 @@ This quiz is created  using HTML5, CSS3 and JavaScript.
      ### Cloning Repository on GitHub 
 
 - ## CREDITS
-***
 ### Content
 - The fonts are imported from Google Fonts.
 ### Media
 -
 
 ## ACKNOWLEDGEMENTS
-***
 I would like to acknowledge the following people who have helped me along the way in completing my second milestone project:
 
 - My Mentor Jubril Akolade for his guidance, best suggestions and constant encouragement. I very much appreciate his coding tips that helped me solve really complicated challenges I faced.

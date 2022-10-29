@@ -97,6 +97,12 @@ p {
     outline: none;
 }
 
+#error-msg {
+    padding: 2px;
+    border: none;
+    color: rgba(255, 0, 0, 0.85)
+}
+
 .btn-area {
     height: 100px;
     margin: auto;

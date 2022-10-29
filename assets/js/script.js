@@ -6,21 +6,32 @@
 let usernameForm = document.getElementById("username-form");
 let usernameButton = document.getElementById("username-submit");
 
+
 usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
     let username = usernameForm.username.value;
+    let errorMsg = document.getElementById ("error-msg");
+    let specialChar = /^[a-zA-Z0-9_]{3,10}$/;  
 
     if (username == null || username == "") {
-        alert("Please enter your name!!")
+        errorMsg.classList.remove('hide');
+        errorMsg.innerHTML = "Please enter your name!!"
     } else if (username.length < 3) {
-        alert("Username must be atleast 3 characters long, Please Try Again!");
-    } else if (username.value !== /^[a-zA-Z0-9.\-_$@*!]{3,30}$/) {
-        alert("Only letters please!");
+        errorMsg.classList.remove('hide');
+        errorMsg.innerHTML = "Username must be atleast 3 characters long, Please Try Again!";
+    } else if (!specialChar.test(username)) {
+        errorMsg.classList.remove('hide');
+        errorMsg.innerHTML = "Only letters please!";
     } else {
-      //  alert( "Hey " + username+ " ! Welcome to the Quiz!!");
+        errorMsg.classList.remove('hide');
+        errorMsg.style.color = "green";
+        errorMsg.innerHTML = "Hey " + username+ " ! Welcome to the Quiz!!";
         buttonStart.classList.remove('hide');
     }
 })
+
+
+
 
 /**
  * Defines "Let's Begin Button click event"
