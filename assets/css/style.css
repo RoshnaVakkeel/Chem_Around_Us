@@ -131,7 +131,7 @@ a:hover {
     color: yellow;
 }
 
-/* Questions page layout */
+/* Quiz Box layout */
 
 .hide {
     display: none;
@@ -162,14 +162,29 @@ a:hover {
     padding-top: 20px;
 }
 
-.option  button {
+.option button{
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 20rem;
     background: lightblue;
     border-radius: 1rem;
+} 
+
+.right {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    width: 20rem;
+    background: green;
+    border-radius: 1rem;
 }
 
+.wrong {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    width: 20rem;
+    background: red;
+    border-radius: 1rem;
+}
 
 ol {
     padding: 0 4rem;

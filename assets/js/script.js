@@ -16,12 +16,12 @@ usernameButton.addEventListener("click", (e) => {
     if (username == null || username == "") {
         errorMsg.classList.remove('hide');
         errorMsg.innerHTML = "Please enter your name!!"
-    } else if (username.length < 3) {
-        errorMsg.classList.remove('hide');
-        errorMsg.innerHTML = "Username must be atleast 3 characters long, Please Try Again!";
     } else if (!specialChar.test(username)) {
         errorMsg.classList.remove('hide');
         errorMsg.innerHTML = "Only letters please!";
+    } else if (username.length < 3) {
+        errorMsg.classList.remove('hide');
+        errorMsg.innerHTML = "Username must be atleast 3 characters long, Please Try Again!";
     } else {
         errorMsg.classList.remove('hide');
         errorMsg.style.color = "green";
@@ -29,7 +29,6 @@ usernameButton.addEventListener("click", (e) => {
         buttonStart.classList.remove('hide');
     }
 })
-
 
 
 /**
@@ -105,31 +104,6 @@ function loadQuestion() {
 }
 
 /**
- * Function to change the questions and display the next
- */
-
-let buttonNext = document.getElementById('btn-next');
-let resultArea = document.getElementById('result-area');
-let scoreValue = document.getElementById('score');
-scoreValue= 0;
-
-function nextQuestion() {
-    option0.disabled = false;
-    option1.disabled = false;
-    option2.disabled = false;
-    option3.disabled = false;
-    if (i < questionList.length - 1) {
-        i = i + 1;
-        loadQuestion();   
-    } else {
-        quizBox.style.display = 'none';
-        scoreValue.innerHTML = scoreValue + '/' + questionList.length;
-        result.classList.remove('hide');
-        resultArea.style.display = 'block';     
-    }
-}
-
-/**
  * Function to select answers and calculate scores
  */
 
@@ -143,26 +117,47 @@ function scoreCalc(e){
 
 
     if (e.innerHTML === questionList[i].answer  && scoreValue<questionList.length) {
+        document.getElementById("score").innerText = ++scoreValue;
         score.innerHTML = scoreValue + '/' + questionList.length;
         
         document.getElementById(e.id).style.background = 'green';
     } else {
         document.getElementById(e.id).style.background = 'red';
     }
-
 }
 
+/**
+ * Function to change the questions and display the next
+ */
 
+ let buttonNext = document.getElementById('btn-next');
+ let resultArea = document.getElementById('result-area');
+ let scoreValue = document.getElementById('score');
+ scoreValue= 0;
+ 
+ 
+ function nextQuestion() {
+     option0.disabled = false;
+     option1.disabled = false;
+     option2.disabled = false;
+     option3.disabled = false;
+     if (i < questionList.length - 1) {
+         i = i + 1;
+         loadQuestion();   
+     } else {
+         quizBox.style.display = 'none';
+         result.classList.remove('hide');
+         resultArea.style.display = 'block';     
+     }
+ }
 
 /**
  * When user clecks the "back to quiz" button, user lands on the first question
  */
 let returnToQuiz = document.getElementById ('back-to-quiz');
 
-returnToQuiz.addEventListener('click', backToQuiz, true)
+returnToQuiz.addEventListener('click', function(e){
+    location.reload();
+});
 
-function backToQuiz() {
-    result.classList.add('hide');
-    quizBox.style.display = 'block';
-    loadQuestion();
- }
+
