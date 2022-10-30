@@ -83,7 +83,7 @@ let questionList = [{
  */
 
 let questionArea = document.getElementById('question-area');
-let questionNumber = document.getElementById("q-number")
+let questionNumber = document.getElementById("q-number");
 let optionAll = document.getElementsByClassName('option');
 
 let option0 = document.getElementById('option0');
@@ -122,10 +122,13 @@ function scoreCalc(e) {
         document.getElementById(e.id).style.background = 'green';                  // if correct answer is chosen.
 
         document.getElementById("live-score").innerText = ++scoreValue;
-        liveScore.innerHTML = "Score:" + scoreValue + '/' + questionList.length;   // displays score in the quiz-box.
-        score.innerHTML = scoreValue + '/' + questionList.length;                  // displays score in the score area.
+        liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
+        score.innerHTML = scoreValue + '/' + questionList.length;   // displays score in the quiz-box.
+        
     } else {
         document.getElementById(e.id).style.background = 'red';                    // if wrong answer is chosen.
+        liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
+        score.innerHTML = scoreValue + '/' + questionList.length;  
     }
 }
 
@@ -138,7 +141,7 @@ let resultArea = document.getElementById('result-area');
 let scoreValue = document.getElementById('score');
 scoreValue = 0;
 
-function nextQuestion() {
+    function nextQuestion() {
     option0.disabled = false;                           // buttons for selection are enabled so that the user can make a choice.
     option0.style.background = 'lightblue';             // buttons are reset to the original colour, so that the changes made do not carry over.
     option1.disabled = false;
@@ -158,6 +161,7 @@ function nextQuestion() {
     }
 }
 
+
 /**
  * When user clicks the "back to quiz" button, full game is reset and user lands on the landing section.
  */
@@ -165,4 +169,4 @@ let returnToQuiz = document.getElementById('back-to-quiz');
 
 returnToQuiz.addEventListener('click', function (e) {
     location.reload();
-});
+})
