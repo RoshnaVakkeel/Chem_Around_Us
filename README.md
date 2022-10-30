@@ -21,12 +21,12 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     -  Question Area
     -  Answer Area
     -  Next Button
--  Results Area 
+-  Result Area 
     -  Score Area
     -  Back to Quiz Button
     -  Rating
--  Accessibility
- TECHNOLOGIES
+    -  Accessibility
+- TECHNOLOGIES
 -  Languages Used
 -  Libraries Used
 - ISSUES AND FIXES
@@ -62,7 +62,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 - ## Design
     - ### Quiz Structure
     - ### Typography
-    -  Wireframes
+    - ### Wireframes
 ## FEATURES
 - ### Landing Section
     - ### Header
@@ -91,6 +91,15 @@ This quiz is created  using HTML5, CSS3 and JavaScript.
 - Google Dev Tools - To debug, troubleshoot and test features and adjust property values. Using the  Lighthouse extension installed in Chrome Browser, the performance report was generated.
 
 ## ISSUES AND FIXES
+- Design Implementations
+1. My initial plan involved superposing each page on one another. But as there are buttons in different pages, it got confusing and styling became very complicated, So, to remove the confusion, I introduced an additional page named "questions.html". From the index.html, the page was  linked using <a> tag. Clicking on which, user would directly get to the questions page. 
+   After recieving Mentor's suggestion on keeping no additional page and it is better in the initial stage to have a single html file i.e. "index.html". I copied all the codes from "questions.html" and pasted it to the "index.html" file. But there was an overlap of the sections, as I had provided style to #landing {position: absolute;} earlier. That was then changed to  #landing {position: relative;} and the overlapping or super position was solved.
+
+2. Another change from the initial designs implemented were: removal of "Previous" button as the function implementation was going to be difficult as the data storage step would be involved.
+
+3. Styling of each div was made easy using flexboxes so that respinsiveness could be easily implemented. Initially all the divs were placed on the same page as per to document flow. In order to make it superpose one above the other. The class attribute named "hide" was introduced with display set to none to the sections "quiz-box" and "result". When we aspire to display the desired section, we could turn its display on using JavaScript "quizBox.classList.remove('hide'). The other method used to hide the previous section is "quizBox.style.display = 'none';".
+
+
 ## TESTING 
 - ### Validation
     - ### W3C Validator (HTML)
