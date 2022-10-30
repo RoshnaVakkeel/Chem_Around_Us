@@ -1,6 +1,6 @@
 /**
- * Introduce username input event listener.
- * Add validation to username input 
+ * Introduces username input event listener.
+ * Adds validation to username input field. 
  */
 
 let usernameForm = document.getElementById("username-form");
@@ -8,14 +8,14 @@ let usernameButton = document.getElementById("username-submit");
 
 
 usernameButton.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.preventDefault(); // prevents user from proceeding without input.
     let username = usernameForm.username.value;
-    let errorMsg = document.getElementById ("error-msg");
-    let specialChar = /^[a-zA-Z0-9_]{3,10}$/;  
+    let errorMsg = document.getElementById("error-msg");
+    let specialChar = /^[a-zA-Z0-9_]{3,10}$/; // Regex for only alphanumerics allowed, also setting word limit for the username.
 
     if (username == null || username == "") {
         errorMsg.classList.remove('hide');
-        errorMsg.innerHTML = "Please enter your name!!"
+        errorMsg.innerHTML = "Please enter your name!!";
     } else if (!specialChar.test(username)) {
         errorMsg.classList.remove('hide');
         errorMsg.innerHTML = "Only letters please!";
@@ -25,27 +25,27 @@ usernameButton.addEventListener("click", (e) => {
     } else {
         errorMsg.classList.remove('hide');
         errorMsg.style.color = "green";
-        errorMsg.innerHTML = "Hey " + username+ " ! Welcome to the Quiz!!";
-        buttonStart.classList.remove('hide');
+        errorMsg.innerHTML = "Hey " + username + " ! Welcome to the Quiz!!";
+        buttonStart.classList.remove('hide'); // Makes the "Let's Begin" button visible. 
     }
 })
 
-
 /**
- * Defines "Let's Begin Button click event"
+ * Defines "Let's Begin" button click event.
+ * Function to load questions into the "quiz-box" section.
  */
 
 let buttonStart = document.getElementById("btn-start");
 let quizBox = document.getElementById('quiz-box');
 let landingSection = document.getElementById('landing');
 
-buttonStart.addEventListener('click', letsBegin)
+buttonStart.addEventListener('click', letsBegin);
 
 function letsBegin() {
-    landingSection.style.display = 'none';
-    quizBox.style.display = 'block';
-    loadQuestion();
-}
+    landingSection.style.display = 'none'; // Makes landing section invisible.
+    quizBox.style.display = 'block'; // Makes quiz-box section visible.
+    loadQuestion(); // Function to update question into quiz-box.
+};
 
 //Questions list for quiz-box (arrays)
 
@@ -79,7 +79,7 @@ let questionList = [{
 ]
 
 /**
- * Loads and updates questions in the quiz-box
+ * Loads questions in the quiz-box.
  */
 
 let questionArea = document.getElementById('question-area');
@@ -92,6 +92,7 @@ let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
 
 let i = 0;
+
 function loadQuestion() {
     for (let a = 0; a < optionAll.length; a++) {
         optionAll[a];
@@ -101,67 +102,67 @@ function loadQuestion() {
     option1.innerHTML = questionList[i].option[1];
     option2.innerHTML = questionList[i].option[2];
     option3.innerHTML = questionList[i].option[3];
-    questionNumber.innerHTML= "Question"+' '+(i+1)+' '+'of'+' '+questionList.length;
+    // lets user know which question are they at now.
+    questionNumber.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionList.length; 
 }
 
 /**
- * Function to select answers and calculate scores
+ * Function to select answers and calculate scores.
+ * Sets conditions for the buttons.
  */
 let liveScore = document.getElementById("live-score")
 
-function scoreCalc(e){
-  console.log(option0.disabled, "<==op 0")
-   option0.disabled = true;
-   option1.disabled = true;
-   option2.disabled = true;
-   option3.disabled = true;
+function scoreCalc(e) {
+    option0.disabled = true;           // buttons are disabled the moment click is made, so that user cannot select any other answer.
+    option1.disabled = true;
+    option2.disabled = true;
+    option3.disabled = true;
 
-    if (e.innerHTML === questionList[i].answer  && scoreValue<questionList.length) {
+    if (e.innerHTML === questionList[i].answer && scoreValue < questionList.length) {
+        document.getElementById(e.id).style.background = 'green';                  // if correct answer is chosen.
+
         document.getElementById("live-score").innerText = ++scoreValue;
-        liveScore.innerHTML = "Score: " + scoreValue + '/' + questionList.length;
-        
-        score.innerHTML = scoreValue + '/' + questionList.length;
-        
-        document.getElementById(e.id).style.background = 'green';
+        liveScore.innerHTML = "Score:" + scoreValue + '/' + questionList.length;   // displays score in the quiz-box.
+        score.innerHTML = scoreValue + '/' + questionList.length;                  // displays score in the score area.
     } else {
-        document.getElementById(e.id).style.background = 'red';
+        document.getElementById(e.id).style.background = 'red';                    // if wrong answer is chosen.
     }
 }
 
 /**
- * Function to change the questions and display the next question
+ * Function to change the questions and update the next question in the quiz-box.
  */
 
- let buttonNext = document.getElementById('btn-next');
- let resultArea = document.getElementById('result-area');
- let scoreValue = document.getElementById('score');
- scoreValue= 0;
-  
- function nextQuestion() {
-     option0.disabled = false;
-     option0.style.background = 'lightblue';
-     option1.disabled = false;
-     option1.style.background = 'lightblue';
-     option2.disabled = false;
-     option2.style.background = 'lightblue';
-     option3.disabled = false;
-     option3.style.background = 'lightblue';
-     
-     if (i < questionList.length - 1) {
-         i = i + 1;
-         loadQuestion();   
-     } else {
-         quizBox.style.display = 'none';
-         result.classList.remove('hide');
-         resultArea.style.display = 'block';     
-     }
- }
+let buttonNext = document.getElementById('btn-next');
+let resultArea = document.getElementById('result-area');
+let scoreValue = document.getElementById('score');
+scoreValue = 0;
+
+function nextQuestion() {
+    option0.disabled = false;                           // buttons for selection are enabled so that the user can make a choice.
+    option0.style.background = 'lightblue';             // buttons are reset to the original colour, so that the changes made do not carry over.
+    option1.disabled = false;
+    option1.style.background = 'lightblue';
+    option2.disabled = false;
+    option2.style.background = 'lightblue';
+    option3.disabled = false;
+    option3.style.background = 'lightblue';
+
+    if (i < questionList.length - 1) {
+        i = i + 1;
+        loadQuestion();
+    } else {
+        quizBox.style.display = 'none';
+        result.classList.remove('hide');                // if the loop reaches the last question, upon clicking Next button, result area is made visible.
+        resultArea.style.display = 'block';
+    }
+}
 
 /**
- * When user clecks the "back to quiz" button, user lands on the landing section
+ * When user clicks the "back to quiz" button, full game is reset and user lands on the landing section.
  */
-let returnToQuiz = document.getElementById ('back-to-quiz');
+let returnToQuiz = document.getElementById('back-to-quiz');
 
-returnToQuiz.addEventListener('click', function(e){
+returnToQuiz.addEventListener('click', function (e) {
     location.reload();
 });
