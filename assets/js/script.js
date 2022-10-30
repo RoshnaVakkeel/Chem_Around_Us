@@ -152,12 +152,10 @@ function scoreCalc(e){
  }
 
 /**
- * When user clecks the "back to quiz" button, user lands on the first question
+ * When user clecks the "back to quiz" button, user lands on the landing section
  */
 let returnToQuiz = document.getElementById ('back-to-quiz');
 
 returnToQuiz.addEventListener('click', function(e){
     location.reload();
 });
-
-
