@@ -1,50 +1,50 @@
-# CHEM AROUND US
+#### CHEM AROUND US
 A chemistry based informative Quiz for all. The inspiration is to provide a small challenge to the user and let them know how chemistry is everywhere. This quiz will leave them with some little extra knowledge and a smile! So go ahead and have some fun!!
 
 ## CONTENTS
 
 <a href= "#ux">USER EXPERIENCE UX </a> 
 - <a href= "#us"> User Stories </a>
-    - #### First Time Visitor Goals
-    - #### Returning Visitor Goals
-- ### Design
-    - #### Quiz Structure
-    - #### Typography
-    - #### Wireframes
-### FEATURES
-- #### Landing Section
-    - #### Header
-    - #### Introduction Area
-    - #### Username Input Field
-    - #### Let's Begin Button
-- #### Quiz Section
-    - #### Question Area
-    - #### Answer Area
-    - #### Next Button
-- #### Results Area 
-    - #### Score Area
-    - #### Back to Quiz Button
-    - #### Rating
-- #### Accessibility
-### TECHNOLOGIES
-- #### Languages Used
-- #### Libraries Used
-### ISSUES AND FIXES
-### TESTING 
-- #### Validation
-    - #### W3C Validator (HTML)
-    - #### W3C Jigsaw Validator (CSS)
-    - #### JSHint (Javascript)
-- ### Performance
-    - #### Lighthouse Tool
-    - #### WAVE Accessibilty Tool
-- ### DEPLOYMENT
-    - #### Project Deployment on GitHub pages
-    - #### Forking Repository on GitHub 
-    - #### Cloning Repository on GitHub 
-- ### CREDITS
-    - #### Content
-- ### ACKNOWLEDGEMENTS
+    -  First Time Visitor Goals
+    -  Returning Visitor Goals
+-  Design
+    -  Quiz Structure
+    -  Typography
+    -  Wireframes
+-  FEATURES
+-  Landing Section
+    -  Header
+    -  Introduction Area
+    -  Username Input Field
+    -  Let's Begin Button
+-  Quiz Section
+    -  Question Area
+    -  Answer Area
+    -  Next Button
+-  Results Area 
+    -  Score Area
+    -  Back to Quiz Button
+    -  Rating
+-  Accessibility
+ TECHNOLOGIES
+-  Languages Used
+-  Libraries Used
+- ISSUES AND FIXES
+- TESTING 
+-  Validation
+    -  W3C Validator (HTML)
+    -  W3C Jigsaw Validator (CSS)
+    -  JSHint (Javascript)
+-  Performance
+    -  Lighthouse Tool
+    -  WAVE Accessibilty Tool
+-  DEPLOYMENT
+    -  Project Deployment on GitHub pages
+    -  Forking Repository on GitHub 
+    -  Cloning Repository on GitHub 
+-  CREDITS
+    -  Content
+-  ACKNOWLEDGEMENTS
 
 <br>
 
@@ -62,7 +62,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 - ## Design
     - ### Quiz Structure
     - ### Typography
-    - ### Wireframes
+    -  Wireframes
 ## FEATURES
 - ### Landing Section
     - ### Header
