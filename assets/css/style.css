@@ -170,22 +170,6 @@ a:hover {
     border-radius: 1rem;
 } 
 
-.right {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    width: 20rem;
-    background: green;
-    border-radius: 1rem;
-}
-
-.wrong {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    width: 20rem;
-    background: red;
-    border-radius: 1rem;
-}
-
 ol {
     padding: 0 4rem;
 }

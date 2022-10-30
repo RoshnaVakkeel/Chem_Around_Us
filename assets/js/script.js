@@ -82,7 +82,8 @@ let questionList = [{
  * Loads and updates questions in the quiz-box
  */
 
-let questionArea = document.getElementById('question-area')
+let questionArea = document.getElementById('question-area');
+let questionNumber = document.getElementById("q-number")
 let optionAll = document.getElementsByClassName('option');
 
 let option0 = document.getElementById('option0');
@@ -92,7 +93,6 @@ let option3 = document.getElementById('option3');
 
 let i = 0;
 function loadQuestion() {
-   
     for (let a = 0; a < optionAll.length; a++) {
         optionAll[a];
     }
@@ -101,12 +101,13 @@ function loadQuestion() {
     option1.innerHTML = questionList[i].option[1];
     option2.innerHTML = questionList[i].option[2];
     option3.innerHTML = questionList[i].option[3];
+    questionNumber.innerHTML= "Question"+' '+(i+1)+' '+'of'+' '+questionList.length;
 }
 
 /**
  * Function to select answers and calculate scores
  */
-
+let liveScore = document.getElementById("live-score")
 
 function scoreCalc(e){
   console.log(option0.disabled, "<==op 0")
@@ -115,9 +116,10 @@ function scoreCalc(e){
    option2.disabled = true;
    option3.disabled = true;
 
-
     if (e.innerHTML === questionList[i].answer  && scoreValue<questionList.length) {
-        document.getElementById("score").innerText = ++scoreValue;
+        document.getElementById("live-score").innerText = ++scoreValue;
+        liveScore.innerHTML = "Score: " + scoreValue + '/' + questionList.length;
+        
         score.innerHTML = scoreValue + '/' + questionList.length;
         
         document.getElementById(e.id).style.background = 'green';
@@ -127,20 +129,24 @@ function scoreCalc(e){
 }
 
 /**
- * Function to change the questions and display the next
+ * Function to change the questions and display the next question
  */
 
  let buttonNext = document.getElementById('btn-next');
  let resultArea = document.getElementById('result-area');
  let scoreValue = document.getElementById('score');
  scoreValue= 0;
- 
- 
+  
  function nextQuestion() {
      option0.disabled = false;
+     option0.style.background = 'lightblue';
      option1.disabled = false;
+     option1.style.background = 'lightblue';
      option2.disabled = false;
+     option2.style.background = 'lightblue';
      option3.disabled = false;
+     option3.style.background = 'lightblue';
+     
      if (i < questionList.length - 1) {
          i = i + 1;
          loadQuestion();   
