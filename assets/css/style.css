@@ -11,7 +11,6 @@ header {
     position: relative;
     width: 100%;
     height: 100px;
-    margin-top: 50px;
 }
 
 body {
@@ -23,11 +22,10 @@ body {
 
 h1 {
     font-family: 'Roboto Condensed', sans-serif;
-    font-Size: 35px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: rgb(10, 10, 70);
-    padding: 10px;
+    font-size: 2.5rem;
 }
 
 p {
@@ -41,23 +39,11 @@ p {
 /*  Heading */
 
 .heading {
-    padding: 30px;
+    padding: 20px;
     text-align: center;
-    font-size: 2.5rem;
 }
 
 /* landing page layout */
-
-#landing {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-}
 
 .intro-area {
     width: 70%;
@@ -65,28 +51,24 @@ p {
     padding: 1%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .intro {
     text-align: center;
     font-size: 1.2em;
     background-color: #E6ECF0;
-    box-sizing: border-box;
     padding: 20px;
 }
 
 .username-info {
-    border: none;
     border: 1px solid #3a3a3a;
     margin-bottom: 5px;
     border-radius: 3px;
-    outline: none;
     padding: 5px;
 }
 
 #username-submit {
-    width: 10%;
+    width: max-content;
     padding: 5px;
     border: none;
     border-radius: 5px;
@@ -94,7 +76,6 @@ p {
     font-weight: bold;
     background-color: #4ba4e0;
     cursor: pointer;
-    outline: none;
 }
 
 #error-msg {
@@ -105,7 +86,6 @@ p {
 
 .btn-area {
     height: 100px;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,20 +94,16 @@ p {
 #btn-start {
     background-color: #4b74c0;
     border: none;
+    border-radius:5px;
     padding: 15px 32px;
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    position: 20vh;
 }
 
-a {
-    color: white;
-}
-
-a:hover {
+#btn-start:hover {
     color: yellow;
 }
 
@@ -137,28 +113,22 @@ a:hover {
     display: none;
 }
 
-#quiz-box {
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 .question-area {
-    text-align: left;
     font-size: 1.2em;
     background-color: #E6ECF0;
     width: 70%;
     margin: auto;
     padding: 1%;
     display: flex;
-    align-items: left;
     flex-direction: column;
+    align-items: center;
 }
 
+ul {
+    list-style-type:none;
+}
 #question {
-    margin-bottom: 3rem;
-    padding-left: 20px;
+    margin-bottom: 1rem;
     padding-top: 20px;
 }
 
@@ -177,6 +147,7 @@ ol {
 #btn-next {
     background-color: #4b74c0;
     border: none;
+    border-radius: 5px;
     padding: 15px 32px;
     color: white;
     font-size: 16px;
@@ -186,12 +157,6 @@ ol {
 }
 
 /*Result area layout*/
-
-#result {
-    position: relative;
-    padding: 0;
-    margin-top: 50px;
-}
 
 #result-area {
     width: 70%;
@@ -203,11 +168,15 @@ ol {
 }
 
 #score-title {
-    margin: 1em;
+    margin: 0.8rem;
 }
 
 #score {
-    font-size: 1em;
+    font-size: 1.5rem;
+    border: 1px solid;
+    width: max-content;
+    margin: auto;
+    padding: 5px;
 }
 
 .star {
@@ -220,11 +189,31 @@ ol {
 #back-to-quiz {
     background-color: #4b74c0;
     border: none;
+    border-radius: 5px;
     padding: 15px 32px;
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    position: 20vh;
+}
+
+
+/* For medium screens sizes from 950px wide and down */
+@media screen and (max-width: 500px) {
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 20px;
+}
 }
