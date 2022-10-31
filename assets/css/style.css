@@ -210,6 +210,13 @@ ol {
     font-size: 1em;
 }
 
+.star {
+    font-size: 3rem;
+    color: blue;
+    border: none;
+    background-color: unset;
+}
+
 #back-to-quiz {
     background-color: #4b74c0;
     border: none;

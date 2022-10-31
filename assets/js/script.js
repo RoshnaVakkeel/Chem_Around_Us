@@ -161,6 +161,26 @@ scoreValue = 0;
     }
 }
 
+/**
+ * Function for rating by the user.
+ */
+let stars = document.querySelectorAll(".star");
+let userChoice = document.querySelector(".choice");
+
+stars.forEach((star, i) => {                            // to loop through the stars.
+    star.onclick = function () {                           
+        let selection = i+1;                            // to make the index value 1 instead of 0 for the first one.
+        userChoice.innerText = `${selection} of 5`; 
+
+        stars.forEach((star, j) => {
+            if (selection >= j +1){
+            star.innerHTML = "&#9733";                  // filled filled star UTF-8 value
+        } else {
+            star.innerHTML = "&#9734"                   // filled star UTF-8 value
+        }
+    })
+    }
+})
 
 /**
  * When user clicks the "back to quiz" button, full game is reset and user lands on the landing section.
