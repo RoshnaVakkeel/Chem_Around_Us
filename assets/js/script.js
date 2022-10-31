@@ -28,7 +28,7 @@ usernameButton.addEventListener("click", (e) => {
         errorMsg.innerHTML = "Hey " + username + " ! Welcome to the Quiz!!";
         buttonStart.classList.remove('hide'); // Makes the "Let's Begin" button visible. 
     }
-})
+});
 
 /**
  * Defines "Let's Begin" button click event.
@@ -45,7 +45,7 @@ function letsBegin() {
     landingSection.style.display = 'none'; // Makes landing section invisible.
     quizBox.style.display = 'block'; // Makes quiz-box section visible.
     loadQuestion(); // Function to update question into quiz-box.
-};
+}
 
 //Questions list for quiz-box (arrays)
 
@@ -76,13 +76,12 @@ let questionList = [{
         option: ['decreases', 'increases', 'Remains same', 'Increases then decreases'],
         answer: 'increases'
     },
-]
+];
 
 /**
  * Loads questions in the quiz-box.
  */
 
-let questionArea = document.getElementById('question-area');
 let questionNumber = document.getElementById("q-number");
 let optionAll = document.getElementsByClassName('option');
 
@@ -94,23 +93,21 @@ let option3 = document.getElementById('option3');
 let i = 0;
 
 function loadQuestion() {
-    for (let a = 0; a < optionAll.length; a++) {
-        optionAll[a];
-    }
+    for (let a = 0; a < optionAll.length; a++) 
     question.innerHTML = (i + 1) + '.' + '     ' + questionList[i].question;
     option0.innerHTML = questionList[i].option[0];
     option1.innerHTML = questionList[i].option[1];
     option2.innerHTML = questionList[i].option[2];
     option3.innerHTML = questionList[i].option[3];
-    // lets user know which question are they at now.
-    questionNumber.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionList.length; 
+    
+    questionNumber.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionList.length; // lets user know which question are they at now.
 }
 
 /**
  * Function to select answers and calculate scores.
  * Sets conditions for the buttons.
  */
-let liveScore = document.getElementById("live-score")
+let liveScore = document.getElementById("live-score");
 
 function scoreCalc(e) {
     option0.disabled = true;           // buttons are disabled the moment click is made, so that user cannot select any other answer.
@@ -123,12 +120,12 @@ function scoreCalc(e) {
 
         document.getElementById("live-score").innerText = ++scoreValue;
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
-        score.innerHTML = scoreValue + '/' + questionList.length;   // displays score in the quiz-box.
+        scoreValue.innerHTML = scoreValue + '/' + questionList.length;   // displays score in the quiz-box.
         
     } else {
         document.getElementById(e.id).style.background = 'red';                    // if wrong answer is chosen.
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
-        score.innerHTML = scoreValue + '/' + questionList.length;  
+        scoreValue.innerHTML = scoreValue + '/' + questionList.length;  
     }
 }
 
@@ -136,7 +133,7 @@ function scoreCalc(e) {
  * Function to change the questions and update the next question in the quiz-box.
  */
 
-let buttonNext = document.getElementById('btn-next');
+let result = document.getElementById('result');
 let resultArea = document.getElementById('result-area');
 let scoreValue = document.getElementById('score');
 scoreValue = 0;
@@ -176,11 +173,11 @@ stars.forEach((star, i) => {                            // to loop through the s
             if (selection >= j +1){
             star.innerHTML = "&#9733";                  // filled filled star UTF-8 value
         } else {
-            star.innerHTML = "&#9734"                   // filled star UTF-8 value
+            star.innerHTML = "&#9734";                   // filled star UTF-8 value
         }
-    })
-    }
-})
+    });
+    };
+});
 
 /**
  * When user clicks the "back to quiz" button, full game is reset and user lands on the landing section.
@@ -189,4 +186,4 @@ let returnToQuiz = document.getElementById('back-to-quiz');
 
 returnToQuiz.addEventListener('click', function (e) {
     location.reload();
-})
+});
