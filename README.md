@@ -1,13 +1,14 @@
-#### CHEM AROUND US
-A chemistry based informative Quiz for all. The inspiration is to provide a small challenge to the user and let them know how chemistry is everywhere. This quiz will leave them with some little extra knowledge and a smile! So go ahead and have some fun!!
+# CHEM AROUND US
+A chemistry based informative Quiz for all. The inspiration is to provide a small challenge to the user and let them know how chemistry is everywhere. This quiz will leave them with some little extra knowledge and a smile! 
+<br>
+**So go ahead and have some fun!!**
 
 ## CONTENTS
-
 <a href= "#ux">USER EXPERIENCE UX </a> 
-- <a href= "#us"> User Stories </a>
+-  User Stories {#us}
     -  First Time Visitor Goals
     -  Returning Visitor Goals
--  Design
+-  Design {#design}
     -  Quiz Structure
     -  Typography
     -  Wireframes

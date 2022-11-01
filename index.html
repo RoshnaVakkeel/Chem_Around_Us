@@ -10,13 +10,14 @@
 </head>
 
 <body>
-
+    <!--header that will appear on each part of the quiz-->
     <header>
         <h1 class="heading">
             <span style='font-size:50px;'>&#9883;</span> CHEM AROUND US
         </h1>
     </header>
 
+    <!--Landing page with game rules and username entry-->
     <section id="landing">
         <div class="intro-area">
             <div class="intro">
@@ -43,6 +44,7 @@
         </div>
     </section>
 
+    <!--Quiz-box where the MCQs will be loaded with a live-score display and status-->
     <section id="quiz-box" class="hide">
         <div class="question-area">
             <span id="live-score"></span>
@@ -61,6 +63,7 @@
         </div>
     </section>
 
+    <!--Result area displays the user's final score, a message for the user and a rating area for feedback-->
     <section id="result" class="hide">
         <div id="result-area">
             <h4 id="score-title">Your score is:</h4>
@@ -82,9 +85,9 @@
         <div class="btn-area">
             <button type="reset" id="back-to-quiz" onclick="backToQuiz()">Back to Quiz Start</button>
         </div>
-
     </section>
 
+    <!--JavaScript link-->
     <script src="assets/js/script.js"></script>
 </body>
 
