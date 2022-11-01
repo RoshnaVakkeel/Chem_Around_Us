@@ -84,10 +84,17 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
 <h2 id = "features"> FEATURES </h2>
 - <h3 id= "landing"> Landing Section </h3>
-    - <h3 id= ""> Header</h3>
+    Landing section is the first page view of the quiz to the user. 
+    <img src = "assets/docs/Landing.png" style= "width: 80%;">
+    - <h3 id= "header"> Header</h3>
+        Header consists of a symbol of an atom used as a logo (Unicode UTF-8/Unicode Transformation Format) and name of the quiz "Chem Around Us."
     - <h3 id= "introduction"> Introduction Area </h3>
+    The text in the introduction area gives a description of the quiz.
     - <h3 id= "username-input"> Username Input Field </h3>
+    Username input area allows the user to enter a username that will later appear as a welcome message in the same page and the name will also appear in the result message area. The validation rules are described here:
+    <img src = "assets/docs/username_validation.png" style= "width: 80%;">
     - <h3 id= "lets-begin"> Let's Begin Button</h3>
+    This button appears when the user submits the valid acceptable username. By clicking this button the quiz section will be rendered visible to the user.
 - <h3 id= "quiz"> Quiz Section</h3>
     - <h3 id= "question"> Question Area</h3>
     - <h3 id= "answer"> Answer Area</h3>
