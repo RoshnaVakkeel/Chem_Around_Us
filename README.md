@@ -4,7 +4,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 **So go ahead and have some fun!!**
 
 ## CONTENTS
-- <a href= "#ux">User Ewperience UX </a> 
+- <a href= "#ux">User Experience UX </a> 
 - <a href= "#us"> User Stories </a>
     -  <a href= "#first-time"> First Time Visitor Goals </a>
     -  <a href= "#returning"> Returning Visitor Goals</a>
@@ -29,15 +29,14 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 -  <a href= "#performance">Performance</a>
     -  <a href= "#lighthouse">Lighthouse Tool</a>
     -  <a href= "#wave">WAVE Accessibilty Tool</a>
--  <a href= "#deployment">DEPLOYMENT</a>
+-  <a href= "#deployment">Deployment</a>
     -  <a href= "#deploy">Project Deployment on GitHub pages</a>
     -  <a href= "#fork">Forking Repository on GitHub </a>
     -  <a href= "#clone">Cloning Repository on GitHub </a>
--  <a href= "#credits">CREDITS</a>
+-  <a href= "#credits">Credits</a>
     -  <a href= "#content">Content</a>
     - <a href= "#media">Media</a>
--  <a href= "#acknowledgements">ACKNOWLEDGEMENTS</a>
-<br>
+-  <a href= "#acknowledgements">Acknowledgements</a>
 
 <h2 id = "ux"> USER EXPERIENCE UX </h2>
 
@@ -179,16 +178,28 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
 
 <h2 id="deployment">DEPLOYMENT </h2>
 
-     <h3 id= "deploy"> Project Deployment on GitHub pages</h3>
-     <h3 id= "fork"> Forking Repository on GitHub </h3>
-     <h3 id= "clone"> Cloning Repository on GitHub </h3>
+- <h3 id= "deploy"> Project Deployment on GitHub pages</h3>
+    GitHub pages were used to deploy the site. The steps to activate Github pages:
+    - Navigate to the <i>Settings</i> tab in the GitHub repository.
+    - Navigate to the 'Pages' tab on the left of the page.
+    - Go to the 'Build and deployment' section, select 'Deploy from a branch' in the <i>source</i> dropdown.
+    - Select branch 'main' and click on 'Save'.
+
+- <h3 id= "fork"> Forking Repository on GitHub </h3>
+
+- <h3 id= "clone"> Cloning Repository on GitHub </h3>
 
 <h2 id= "credits"> CREDITS </h2>
 
 - <h3 id= "content"> Content</h3>
     The fonts are imported from Google Fonts.
+    A few references for coding:
+    1. <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> For username input</a>
+    2. 
 
 - <h3 id= "media"> Media</h3>
+    - Youtube videos were referred to in order to understand and clarify many functions.
+    - <a href = ""></a>
 
 
 <h2 id= "acknowledgements"> ACKNOWLEDGEMENTS </h2>
