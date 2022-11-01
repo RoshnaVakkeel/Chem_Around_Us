@@ -28,10 +28,13 @@
                     This quiz consists of Multiple Choice Questions. Use your best guess and click on the
                     answer. Right answers will appear green and wrong ones in red. Scores will appear right away.
                     <br> <br>
-                    Ready to challenge yourself? Then enter your Username and click the button below..</p>
+                    Ready to challenge yourself? </p>
 
                 <form id="username-form">
+                    <label for="username-field">Enter your Username:</strong></label>
                     <input type="text" name="username" id="username-field" class="username-info" placeholder="Username">
+                    <br>
+                    <label for="username-submit">Click:</label>
                     <input type="submit" value="Submit" id="username-submit">
                     <br>
                     <span id="error-msg" class="hide"></span>
@@ -50,10 +53,10 @@
             <span id="live-score"></span>
             <h4 id="question">Question</h4>
             <ul id="options">
-                <li class="option"><button id="option0" onclick="scoreCalc(this)"></button></li>
-                <li class="option"><button id="option1" onclick="scoreCalc(this)"></button></li>
-                <li class="option"><button id="option2" onclick="scoreCalc(this)"></button></li>
-                <li class="option"><button id="option3" onclick="scoreCalc(this)"></button></li>
+                <li class="option"><button id="option0" onclick="scoreCalc(this)">Oprion 1 </button></li>
+                <li class="option"><button id="option1" onclick="scoreCalc(this)">Option 2</button></li>
+                <li class="option"><button id="option2" onclick="scoreCalc(this)">Option 3</button></li>
+                <li class="option"><button id="option3" onclick="scoreCalc(this)">Option 4</button></li>
             </ul>
             <span id="q-number"></span>
         </div>
@@ -66,10 +69,10 @@
     <!--Result area displays the user's final score, a message for the user and a rating area for feedback-->
     <section id="result" class="hide">
         <div id="result-area">
-            <h4 id="score-title">Your score is:</h4>
-            <h3 id="score">Ö Ö - Please attempt answering!</h3>
-            <h5> Remember your reward is Precious Knowledge!!</h5>
-            <h5> and scores are mere numbers..</h5>
+            <p id="score-title">Your score is:</p>
+            <p id="score">Ö Ö - Please attempt answering!</p>
+            <p> Remember your reward is Precious Knowledge!!</p>
+            <p> and scores are mere numbers..</p>
             <br>
             <div class="rating">
                 <h4>Did you enjoy playing the quiz? Rate us please!!</h4>

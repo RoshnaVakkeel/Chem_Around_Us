@@ -30,7 +30,7 @@ h1 {
 
 p {
     font-family: 'Cabin', Sans-Serif;
-    padding: 20px;
+    padding: 10px;
     font-size: 1em;
     line-height: 30px;
     color: #252525;
@@ -69,12 +69,12 @@ p {
 
 #username-submit {
     width: max-content;
-    padding: 5px;
+    padding: 7px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     color: white;
     font-weight: bold;
-    background-color: #4ba4e0;
+    background-color: #166a9e;
     cursor: pointer;
 }
 
@@ -167,9 +167,10 @@ ol {
     background-color: #E6ECF0;
 }
 
-#score-title, h5 {
+#score-title {
     margin: 0.8rem;
     color: rgba(190, 16, 190, 0.877);
+    font-size: 1.5rem;
 }
 
 #score {
@@ -213,7 +214,7 @@ h2 {
 }
 
 p {
-    padding: 20px;
+    padding: 10px;
     font-size: 1.2rem;
     line-height: 20px;
 }

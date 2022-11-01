@@ -5,10 +5,10 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
 ## CONTENTS
 <a href= "#ux">USER EXPERIENCE UX </a> 
--  User Stories {#us}
+- <a href= "#us"> User Stories </a>
     -  First Time Visitor Goals
     -  Returning Visitor Goals
--  Design {#design}
+-  <a href= "#design">Design</a>
     -  Quiz Structure
     -  Typography
     -  Wireframes
