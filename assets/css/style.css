@@ -156,6 +156,10 @@ ol {
     margin: 0 100px;
 }
 
+#btn-next:hover {
+    color: yellow;
+}
+
 /*Result area layout*/
 
 #result-area {
@@ -198,6 +202,10 @@ ol {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+}
+
+#back-to-quiz:hover {
+    color: yellow;
 }
 
 

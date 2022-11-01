@@ -18,7 +18,7 @@ usernameButton.addEventListener("click", (e) => {
         errorMsg.innerHTML = "Please enter your name!!";
     } else if (!specialChar.test(username)) {
         errorMsg.classList.remove('hide');
-        errorMsg.innerHTML = "Only letters please and 3-10 characters long!";
+        errorMsg.innerHTML = "Enter only alphanumeric characters (3-10 characters long)!";
     } else {
         errorMsg.classList.remove('hide');
         errorMsg.style.color = "green";
