@@ -53,34 +53,52 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 <h3 id = "us"> User Stories </h3>
 
 - <h3 id = "first-time">  First Time Visitor Goals</h3>
-        -  As a student who is looking for a chemistry-based quiz, I want to solve challenges in the quiz that are inspired from academia, so that it helps me learn new concepts. <br>
-        - As a student who is looking for a chemistry-based quiz, I want to be given one chance only to click an answer, so that it lets me assess myself well. <br>
-        - As a student who is looking for a chemistry-based quiz, I want to get awarded for my efforts and my scores to be evaluated, so that I can assess how good I know the subject.<br>
+        -  As a student who is looking for a chemistry-based quiz, I want to solve challenges in the quiz that are inspired from academia, so that it helps me learn new concepts. 
+        <br>
+        - As a student who is looking for a chemistry-based quiz, I want to be given one chance only to click an answer, so that it lets me assess myself well. 
+        <br>
+        - As a student who is looking for a chemistry-based quiz, I want to get awarded for my efforts and my scores to be evaluated, so that I can assess how good I know the subject.
+        <br>
         - As a student who is looking for a chemistry-based quiz, I wish to be able to rate the quiz, so that I can let the creator know how I felt.
 
 - <h3 id="returning"> Returning Visitor Goals</h3>
         - As a student who is revisiting the quiz, I want to be encouraged to play the quiz again and again, so that they I can memorize the contents thoroghly.
+        <br>
         - As a student who is revisiting the quiz, I want to retake the quiz if my scores are low, so that I can try again and learn the answers well.
 
-- <h2 id = "design">  Design </h2>
+- <h2 id = "design"> Design </h2>
     - <h3 id="quiz-struture">  Quiz Structure </h3>
+        The quiz consists of three main sections on a page, excluding the header. The <a href= "#landing">landing section</a> gives user an <a href = "#introduction">introduction </a>about the structure of the quiz and a <a href = "#username-input">username input box </a> to enter their username entry. Upon entering their valid username, a <a href= "#lets-begin"> "Let's Begin"</a> button appears. When clicked the user is led to the <a href= "#quiz">quiz section</a> containing 5 multiple choice questions. Users can select the answers and can go ahead to the next questions by clicking <a href= "#next">next button</a> . After finishing the questions the user raeches the <a href= "#result">result section</a>. User can see their scores and a message with their name. Users can also provide <a href= "rating"> rating</a> by selecting the stars. If the user chooses to play the quiz again. They can click <a href= "back"> Back to Quiz Button</a> and the quiz gets reloaded.
+
     - <h3 id="typography"> Typography </h3>
+        - Google Fonts was used for the following fonts:
+        <br>
+        Font-family= Cabin - for all the paragraphs and normal text.
+        <br>
+        Font-family= Roboto Condensed for all headings.
+        <br>
+        UTF-8 Symbol was used as quiz logo - Atom symbol (Dec - 9883) and for rating section - white star (Dec : 9734) and filled star (Dec - 9733).
+
     - <h3 id="wireframes"> Wireframes </h3>
+    To model the quiz and to design the User Interfaces better, Wireframes were created for the website using <a href= "https://balsamiq.com/">Balsamiq</a>.
+
 <h2 id = "features"> FEATURES </h2>
-- <h3 id= ""> Landing Section </h3>
+- <h3 id= "landing"> Landing Section </h3>
     - <h3 id= ""> Header</h3>
-    - <h3 id= ""> Introduction Area </h3>
-    - <h3 id= ""> Username Input Field </h3>
-    - <h3 id= ""> Let's Begin Button</h3>
-- <h3 id= ""> Quiz Section</h3>
-    - <h3 id= ""> Question Area</h3>
-    - <h3 id= ""> Answer Area</h3>
-    - <h3 id= ""> Next Button</h3>
-- <h3 id= ""> Results Area </h3>
-    - <h3 id= ""> Score Area</h3>
-    - <h3 id= ""> Back to Quiz Button</h3>
-    - <h3 id= ""> Rating</h3>
-- <h3 id= ""> Accessibility</h3>
+    - <h3 id= "introduction"> Introduction Area </h3>
+    - <h3 id= "username-input"> Username Input Field </h3>
+    - <h3 id= "lets-begin"> Let's Begin Button</h3>
+- <h3 id= "quiz"> Quiz Section</h3>
+    - <h3 id= "question"> Question Area</h3>
+    - <h3 id= "answer"> Answer Area</h3>
+    - <h3 id= "next"> Next Button</h3>
+- <h3 id= "result"> Results Area </h3>
+    - <h3 id= "score"> Score Area</h3>
+    - <h3 id= "rating"> Rating</h3>
+    - <h3 id= "back"> Back to Quiz Button</h3>
+    
+- <h3 id= "accessibility"> Accessibility</h3>
+The quiz is rendered accessible as much as possible by using semantic HTML elements, providing adequate contrast to the fonts. To further ensure that the site is accessible tests with the Web Accessibility Evaluation Tool (WAVE) were conducted.
 
 <h2 id=""></h2>TECHNOLOGIES
 <h3 id= ""> Languages Used</h3>
