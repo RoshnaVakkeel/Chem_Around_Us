@@ -4,7 +4,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 **So go ahead and have some fun!!**
 
 ## CONTENTS
-- <a href= "#ux">USER EXPERIENCE UX </a> 
+- <a href= "#ux">User Ewperience UX </a> 
 - <a href= "#us"> User Stories </a>
     -  <a href= "#first-time"> First Time Visitor Goals </a>
     -  <a href= "#returning"> Returning Visitor Goals</a>
@@ -17,7 +17,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     -  <a href= "#quiz">Quiz Section</a>
     -  <a href= "#result">Result Area </a>
     -  <a href= "#accessibilty">Accessibility</a>
-- <a href= "#technologies">TECHNOLOGIES</a>
+- <a href= "#technologies">Technologies</a>
 - <a href= "#languages">Languages Used</a>
 - <a href= "#libraries">Libraries Used</a>
 - <a href= "#issues">Issues and Fixes</a>
@@ -40,9 +40,10 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 <br>
 
 <h2 id = "ux"> USER EXPERIENCE UX </h2>
-<h3 id = "us"> User Stories </h3>
 
-- <h3 id = "first-time">  First Time Visitor Goals</h3>
+- <h3 id = "us"> User Stories </h3>
+
+    - <h3 id = "first-time">  First Time Visitor Goals</h3>
         -  As a student who is looking for a chemistry-based quiz, I want to solve challenges in the quiz that are inspired from academia, so that it helps me learn new concepts. 
         <br>
         - As a student who is looking for a chemistry-based quiz, I want to be given one chance only to click an answer, so that it lets me assess myself well. 
@@ -51,7 +52,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
         <br>
         - As a student who is looking for a chemistry-based quiz, I wish to be able to rate the quiz, so that I can let the creator know how I felt.
 
-- <h3 id="returning"> Returning Visitor Goals</h3>
+    - <h3 id="returning"> Returning Visitor Goals</h3>
         - As a student who is revisiting the quiz, I want to be encouraged to play the quiz again and again, so that they I can memorize the contents thoroghly.
         <br>
         - As a student who is revisiting the quiz, I want to retake the quiz if my scores are low, so that I can try again and learn the answers well.
@@ -98,7 +99,6 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
     <img src = "assets/docs/quiz_box_detail.png">
     
-
     - <h3 id= "question"> Question Area</h3>
         Each time the next button is clicked, a new question gets loaded onto the quiz-box.
 
@@ -125,13 +125,14 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     This button is a reset type button. The user lands on the first landing page upon clicking it.
     
 - <h3 id= "accessibility"> Accessibility</h3>
-The quiz is rendered accessible as much as possible by using semantic HTML elements, providing adequate contrast to the fonts. To further ensure that the site is accessible tests with the Web Accessibility Evaluation Tool (WAVE) were conducted.
+    The quiz is rendered accessible as much as possible by using semantic HTML elements, providing adequate contrast to the fonts. To further ensure that the site is accessible tests with the Web Accessibility Evaluation Tool (WAVE) were conducted.
 
-<h2 id=""></h2>TECHNOLOGIES
-<h3 id= ""> Languages Used</h3>
+<h2 id="technologies">TECHNOLOGIES</h2>
+
+<h3 id= "languages"> Languages Used</h3>
 This quiz is created  using HTML5, CSS3 and JavaScript.
 
-<h3 id= ""> Libraries Used</h3>
+<h3 id= "libraries"> Libraries Used</h3>
 - Git - For version control
 - GitHub - To create my repositories, save and store my project files
 - Google Fonts - To import fonts
@@ -152,16 +153,29 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
 - <h3 id= "validation"> Validation</h3>
 
     - <h3 id= "w3c-html"> W3C Validator (HTML)</h3>
+    To test compliance with HTML standards, the <a href= "https://validator.w3.org/">W3C Markup Validation Service</a> was used.
+    Result of index.html validation: <strong> No errors found. </strong>
+
+    <img src= "assets/docs/W3C_validatior_HTML.png" >
 
     - <h3 id= "w3c-css"> W3C Jigsaw Validator (CSS)</h3>
+    To test compliance with HTML standards, the <a href= "https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service - Jigsaw</a> was used.
+    <br>
+    Result of CSS validation: <strong>No errors found.</strong>
+    <img src= "assets/docs/W3C_Jigsaw_validator_CSS.png">
 
     - <h3 id= "jshint"> JSHint (Javascript)</h3>
 
 <h2 id="performance">PERFORMANCE </h2>
 
 - <h3 id= "lighthouse"> Lighthouse Tool</h3>
+    To test the performance, quality, and correctness of your web pages, <a href= "https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Lighthouse</a> chrome extension tool was used. Result:
+
+    <img src= "assets/docs/Lighthouse_test.png">
 
 - <h3 id= "wave"> WAVE Accessibilty Tool</h3>
+    WAVE did not report any errors or contrast errors.
+    <img src= "assets/docs/WAVE_test.png">
 
 <h2 id="deployment">DEPLOYMENT </h2>
 
