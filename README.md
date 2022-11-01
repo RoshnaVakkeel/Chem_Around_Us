@@ -4,39 +4,39 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 **So go ahead and have some fun!!**
 
 ## CONTENTS
-<a href= "#ux">USER EXPERIENCE UX </a> 
+- <a href= "#ux">USER EXPERIENCE UX </a> 
 - <a href= "#us"> User Stories </a>
-    -  First Time Visitor Goals
-    -  Returning Visitor Goals
+    -  <a href= "#first-time"> First Time Visitor Goals </a>
+    -  <a href= "#returning"> Returning Visitor Goals</a>
 -  <a href= "#design">Design</a>
-    -  Quiz Structure
-    -  Typography
-    -  Wireframes
--  FEATURES
-    -  Landing Section
-    -  Quiz Section
-    -  Result Area 
-    -  Accessibility
-- TECHNOLOGIES
-- Languages Used
-- Libraries Used
-- ISSUES AND FIXES
-- TESTING 
--  Validation
-    -  W3C Validator (HTML)
-    -  W3C Jigsaw Validator (CSS)
-    -  JSHint (Javascript)
--  Performance
-    -  Lighthouse Tool
-    -  WAVE Accessibilty Tool
--  DEPLOYMENT
-    -  Project Deployment on GitHub pages
-    -  Forking Repository on GitHub 
-    -  Cloning Repository on GitHub 
--  CREDITS
-    -  Content
--  ACKNOWLEDGEMENTS
-
+    - <a href= "#quiz"> Quiz Structure</a>
+    -  <a href= "#typography">Typography</a>
+    -  <a href= "#wireframes">Wireframes</a>
+-  <a href= "#features">Features</a>
+    -  <a href= "#landing">Landing Section</a>
+    -  <a href= "#quiz">Quiz Section</a>
+    -  <a href= "#result">Result Area </a>
+    -  <a href= "#accessibilty">Accessibility</a>
+- <a href= "#technologies">TECHNOLOGIES</a>
+- <a href= "#languages">Languages Used</a>
+- <a href= "#libraries">Libraries Used</a>
+- <a href= "#issues">Issues and Fixes</a>
+- <a href= "#testing">Testing </a>
+-  <a href= "#validation">Validation</a>
+    -  <a href= "#w3c-html">W3C Validator (HTML)</a>
+    -  <a href= "#w3c-css">W3C Jigsaw Validator (CSS)</a>
+    -  <a href= "#jshint">JSHint (Javascript)</a>
+-  <a href= "#performance">Performance</a>
+    -  <a href= "#lighthouse">Lighthouse Tool</a>
+    -  <a href= "#wave">WAVE Accessibilty Tool</a>
+-  <a href= "#deployment">DEPLOYMENT</a>
+    -  <a href= "#deploy">Project Deployment on GitHub pages</a>
+    -  <a href= "#fork">Forking Repository on GitHub </a>
+    -  <a href= "#clone">Cloning Repository on GitHub </a>
+-  <a href= "#credits">CREDITS</a>
+    -  <a href= "#content">Content</a>
+    - <a href= "#media">Media</a>
+-  <a href= "#acknowledgements">ACKNOWLEDGEMENTS</a>
 <br>
 
 <h2 id = "ux"> USER EXPERIENCE UX </h2>
@@ -93,22 +93,36 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     This button appears when the user submits the valid acceptable username. By clicking this button the quiz section will be rendered visible to the user.
 
 - <h3 id= "quiz"> Quiz Section</h3>
+    The quiz area will initially contain just question and answers. When an option is clicked, a live-score area and the status information gets added to the quiz area. 
+    <img src = "assets/docs/quiz_box.png">
     Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
     <img src = "assets/docs/quiz_box_detail.png">
+    
 
     - <h3 id= "question"> Question Area</h3>
-    Each time the next button is clicked, a new question gets loaded onto the quiz-box.
+        Each time the next button is clicked, a new question gets loaded onto the quiz-box.
 
     - <h3 id= "option"> Option Area</h3>
-
-    <img src = "assets/docs/quiz_box.png">
-
+        Each question has 4 choices for the user to select from. User is allowed to click on only one option. Once the selection is made, the other buttons will become inactive. The correct answer will appear as green button and wrong one in red color. The live score span will appear above the question and a status of question will appear at the bottom of the box.
+        Each correct answer increments the score by the value of 1.
+        <img src = "assets/docs/selection.png">
+    
     - <h3 id= "next"> Next Button</h3>
+        Next button when clicked loads a new set of options with a next question.
 
 - <h3 id= "result"> Results Area </h3>
+    After the user makes the selection of option of the last question, the result area will appear on the screen. The details are provided in the image below. A message containing the username will appear in the result area.
+    <img src = "assets/docs/result_detail.png">
+
     - <h3 id= "score"> Score Area</h3>
+    Final score will appear in this area. If user skips all selection, a message to make selection will appear in the same position.
+
     - <h3 id= "rating"> Rating</h3>
+    This area contains 5 white star symbols. User can click on their preferred number olloing which the selected stars will appear filled and a rating score will appear below.
+    <img src = "assets/docs/rating.png">
+
     - <h3 id= "back"> Back to Quiz Button</h3>
+    This button is a reset type button. The user lands on the first landing page upon clicking it.
     
 - <h3 id= "accessibility"> Accessibility</h3>
 The quiz is rendered accessible as much as possible by using semantic HTML elements, providing adequate contrast to the fonts. To further ensure that the site is accessible tests with the Web Accessibility Evaluation Tool (WAVE) were conducted.
@@ -124,36 +138,46 @@ This quiz is created  using HTML5, CSS3 and JavaScript.
 - Font Awesome - For the iconography used in footer and links
 - Google Dev Tools - To debug, troubleshoot and test features and adjust property values. Using the  Lighthouse extension installed in Chrome Browser, the performance report was generated.
 
-<h2 id="">ISSUES AND FIXES </h2>
-- Design Implementations
+<h2 id="issues">ISSUES AND FIXES </h2>
+
 1. My initial plan involved superposing each page on one another. But as there are buttons in different pages, it got confusing and styling became very complicated, So, to remove the confusion, I introduced an additional page named "questions.html". From the index.html, the page was  linked using "action" tag. Clicking on which, user would directly get to the questions page. 
-   After recieving Mentor's suggestion on keeping no additional page and it is better in the initial stage to have a single html file i.e. "index.html". I copied all the codes from "questions.html" and pasted it to the "index.html" file. But there was an overlap of the sections, as I had provided style to #landing {position: absolute;} earlier. That was then changed to  #landing {position: relative;} and the overlapping or super position was solved.
+After recieving Mentor's suggestion on keeping no additional page and it is better in the initial stage to have a single html file i.e. "index.html". I copied all the codes from "questions.html" and pasted it to the "index.html" file. But there was an overlap of the sections, as I had provided style to #landing {position: absolute;} earlier. That was then changed to  #landing {position: relative;} and the overlapping or super position was solved.
 
 2. Another change from the initial designs implemented were: removal of "Previous" button as the function implementation was going to be difficult as the data storage step would be involved.
 
 3. Styling of each div was made easy using flexboxes so that respinsiveness could be easily implemented. Initially all the divs were placed on the same page as per to document flow. In order to make it superpose one above the other. The class attribute named "hide" was introduced with display set to none to the sections "quiz-box" and "result". When we aspire to display the desired section, we could turn its display on using JavaScript "quizBox.classList.remove('hide'). The other method used to hide the previous section is "quizBox.style.display = 'none';".
 
+<h2 id="testing">TESTING </h2>
 
-<h2 id="">TESTING </h2>
-- <h3 id= ""> Validation</h3>
-    - <h3 id= ""> W3C Validator (HTML)</h3>
-    - <h3 id= ""> W3C Jigsaw Validator (CSS)</h3>
-    - <h3 id= ""> JSHint (Javascript)</h3>
-- <h3 id="">Performance
-    - <h3 id= ""> Lighthouse Tool</h3>
-    - <h3 id= ""> WAVE Accessibilty Tool</h3>
-- <h3 id="">DEPLOYMENT
-     <h3 id= ""> Project Deployment on GitHub pages</h3>
-     <h3 id= ""> Forking Repository on GitHub </h3>
-     <h3 id= ""> Cloning Repository on GitHub </h3>
+- <h3 id= "validation"> Validation</h3>
 
-- ## CREDITS
-<h3 id= ""> Content</h3>
-- The fonts are imported from Google Fonts.
-<h3 id= ""> Media</h3>
--
+    - <h3 id= "w3c-html"> W3C Validator (HTML)</h3>
 
-## ACKNOWLEDGEMENTS
+    - <h3 id= "w3c-css"> W3C Jigsaw Validator (CSS)</h3>
+
+    - <h3 id= "jshint"> JSHint (Javascript)</h3>
+
+<h2 id="performance">PERFORMANCE </h2>
+
+- <h3 id= "lighthouse"> Lighthouse Tool</h3>
+
+- <h3 id= "wave"> WAVE Accessibilty Tool</h3>
+
+<h2 id="deployment">DEPLOYMENT </h2>
+
+     <h3 id= "deploy"> Project Deployment on GitHub pages</h3>
+     <h3 id= "fork"> Forking Repository on GitHub </h3>
+     <h3 id= "clone"> Cloning Repository on GitHub </h3>
+
+<h2 id= "credits"> CREDITS </h2>
+
+- <h3 id= "content"> Content</h3>
+    The fonts are imported from Google Fonts.
+
+- <h3 id= "media"> Media</h3>
+
+
+<h2 id= "acknowledgements"> ACKNOWLEDGEMENTS </h2>
 I would like to acknowledge the following people who have helped me along the way in completing my second milestone project:
 
 - My Mentor Jubril Akolade for his guidance, best suggestions and constant encouragement. I very much appreciate his coding tips that helped me solve really complicated challenges I faced.
