@@ -167,8 +167,9 @@ ol {
     background-color: #E6ECF0;
 }
 
-#score-title {
+#score-title, h5 {
     margin: 0.8rem;
+    color: rgba(190, 16, 190, 0.877);
 }
 
 #score {

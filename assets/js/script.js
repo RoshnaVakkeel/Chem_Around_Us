@@ -18,10 +18,7 @@ usernameButton.addEventListener("click", (e) => {
         errorMsg.innerHTML = "Please enter your name!!";
     } else if (!specialChar.test(username)) {
         errorMsg.classList.remove('hide');
-        errorMsg.innerHTML = "Only letters please!";
-    } else if (username.length < 3) {
-        errorMsg.classList.remove('hide');
-        errorMsg.innerHTML = "Username must be atleast 3 characters long, Please Try Again!";
+        errorMsg.innerHTML = "Only letters please and 3-10 characters long!";
     } else {
         errorMsg.classList.remove('hide');
         errorMsg.style.color = "green";
@@ -93,13 +90,13 @@ let option3 = document.getElementById('option3');
 let i = 0;
 
 function loadQuestion() {
-    for (let a = 0; a < optionAll.length; a++) 
-    question.innerHTML = (i + 1) + '.' + '     ' + questionList[i].question;
+    for (let a = 0; a < optionAll.length; a++)
+        question.innerHTML = (i + 1) + '.' + '     ' + questionList[i].question;
     option0.innerHTML = questionList[i].option[0];
     option1.innerHTML = questionList[i].option[1];
     option2.innerHTML = questionList[i].option[2];
     option3.innerHTML = questionList[i].option[3];
-    
+
     questionNumber.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionList.length; // lets user know which question are they at now.
 }
 
@@ -108,24 +105,31 @@ function loadQuestion() {
  * Sets conditions for the buttons.
  */
 let liveScore = document.getElementById("live-score");
+let scoreValue = document.getElementById('score');
+let score = document.getElementById('score');
+let scoreTitle = document.getElementById('score-title');
+scoreValue = 0;
 
 function scoreCalc(e) {
-    option0.disabled = true;           // buttons are disabled the moment click is made, so that user cannot select any other answer.
+    option0.disabled = true; // buttons are disabled the moment click is made, so that user cannot select any other answer.
     option1.disabled = true;
     option2.disabled = true;
     option3.disabled = true;
 
+    let username = usernameForm.username.value;
+    scoreTitle.innerText = "Kudos" + " " + username + "!! Your score is:";
+
     if (e.innerHTML === questionList[i].answer && scoreValue < questionList.length) {
-        document.getElementById(e.id).style.background = 'green';                  // if correct answer is chosen.
+        document.getElementById(e.id).style.background = 'green'; // if correct answer is chosen.
 
         document.getElementById("live-score").innerText = ++scoreValue;
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
-        scoreValue.innerHTML = scoreValue + '/' + questionList.length;   // displays score in the quiz-box.
-        
+        score.innerHTML = scoreValue + '/' + questionList.length; // displays score in the quiz-box.
+
     } else {
-        document.getElementById(e.id).style.background = 'red';                    // if wrong answer is chosen.
+        document.getElementById(e.id).style.background = 'red'; // if wrong answer is chosen.
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
-        scoreValue.innerHTML = scoreValue + '/' + questionList.length;  
+        score.innerHTML = scoreValue + '/' + questionList.length;
     }
 }
 
@@ -135,12 +139,10 @@ function scoreCalc(e) {
 
 let result = document.getElementById('result');
 let resultArea = document.getElementById('result-area');
-let scoreValue = document.getElementById('score');
-scoreValue = 0;
 
-    function nextQuestion() {
-    option0.disabled = false;                           // buttons for selection are enabled so that the user can make a choice.
-    option0.style.background = 'lightblue';             // buttons are reset to the original colour, so that the changes made do not carry over.
+function nextQuestion() {
+    option0.disabled = false; // buttons for selection are enabled so that the user can make a choice.
+    option0.style.background = 'lightblue'; // buttons are reset to the original colour, so that the changes made do not carry over.
     option1.disabled = false;
     option1.style.background = 'lightblue';
     option2.disabled = false;
@@ -153,7 +155,7 @@ scoreValue = 0;
         loadQuestion();
     } else {
         quizBox.style.display = 'none';
-        result.classList.remove('hide');                // if the loop reaches the last question, upon clicking Next button, result area is made visible.
+        result.classList.remove('hide'); // if the loop reaches the last question, upon clicking Next button, result area is made visible.
         resultArea.style.display = 'block';
     }
 }
@@ -164,18 +166,18 @@ scoreValue = 0;
 let stars = document.querySelectorAll(".star");
 let userChoice = document.querySelector(".choice");
 
-stars.forEach((star, i) => {                            // to loop through the stars.
-    star.onclick = function () {                           
-        let selection = i+1;                            // to make the index value 1 instead of 0 for the first one.
-        userChoice.innerText = `${selection} of 5`; 
+stars.forEach((star, i) => { // to loop through the stars.
+    star.onclick = function () {
+        let selection = i + 1; // to make the index value 1 instead of 0 for the first one.
+        userChoice.innerText = `${selection} of 5`;
 
         stars.forEach((star, j) => {
-            if (selection >= j +1){
-            star.innerHTML = "&#9733";                  // filled filled star UTF-8 value
-        } else {
-            star.innerHTML = "&#9734";                   // filled star UTF-8 value
-        }
-    });
+            if (selection >= j + 1) {
+                star.innerHTML = "&#9733"; // filled filled star UTF-8 value
+            } else {
+                star.innerHTML = "&#9734"; // filled star UTF-8 value
+            }
+        });
     };
 });
 
