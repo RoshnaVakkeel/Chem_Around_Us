@@ -13,19 +13,9 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     -  Typography
     -  Wireframes
 -  FEATURES
--  Landing Section
-    -  Header
-    -  Introduction Area
-    -  Username Input Field
-    -  Let's Begin Button
--  Quiz Section
-    -  Question Area
-    -  Answer Area
-    -  Next Button
--  Result Area 
-    -  Score Area
-    -  Back to Quiz Button
-    -  Rating
+    -  Landing Section
+    -  Quiz Section
+    -  Result Area 
     -  Accessibility
 - TECHNOLOGIES
 - Languages Used
@@ -66,39 +56,55 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
         <br>
         - As a student who is revisiting the quiz, I want to retake the quiz if my scores are low, so that I can try again and learn the answers well.
 
-- <h2 id = "design"> Design </h2>
-    - <h3 id="quiz-struture">  Quiz Structure </h3>
-        The quiz consists of three main sections on a page, excluding the header. The <a href= "#landing">landing section</a> gives user an <a href = "#introduction">introduction </a>about the structure of the quiz and a <a href = "#username-input">username input box </a> to enter their username entry. Upon entering their valid username, a <a href= "#lets-begin"> "Let's Begin"</a> button appears. When clicked the user is led to the <a href= "#quiz">quiz section</a> containing 5 multiple choice questions. Users can select the answers and can go ahead to the next questions by clicking <a href= "#next">next button</a> . After finishing the questions the user raeches the <a href= "#result">result section</a>. User can see their scores and a message with their name. Users can also provide <a href= "rating"> rating</a> by selecting the stars. If the user chooses to play the quiz again. They can click <a href= "back"> Back to Quiz Button</a> and the quiz gets reloaded.
+<h2 id = "design"> DESIGN </h2>
 
-    - <h3 id="typography"> Typography </h3>
-        - Google Fonts was used for the following fonts:
-        <br>
-        Font-family= Cabin - for all the paragraphs and normal text.
-        <br>
-        Font-family= Roboto Condensed for all headings.
-        <br>
-        UTF-8 Symbol was used as quiz logo - Atom symbol (Dec - 9883) and for rating section - white star (Dec : 9734) and filled star (Dec - 9733).
+- <h3 id="quiz-struture">  Quiz Structure </h3>
+    The quiz consists of three main sections on a page, excluding the header. The <a href= "#landing">landing section</a> gives user an <a href = "#introduction">introduction </a>about the structure of the quiz and a <a href = "#username-input">username input box </a> to enter their username entry. Upon entering their valid username, a <a href= "#lets-begin"> "Let's Begin"</a> button appears. When clicked the user is led to the <a href= "#quiz">quiz section</a> containing 5 multiple choice questions. Users can select the answers and can go ahead to the next questions by clicking <a href= "#next">next button</a> . After finishing the questions the user raeches the <a href= "#result">result section</a>. User can see their scores and a message with their name. Users can also provide <a href= "rating"> rating</a> by selecting the stars. If the user chooses to play the quiz again. They can click <a href= "back"> Back to Quiz Button</a> and the quiz gets reloaded.
 
-    - <h3 id="wireframes"> Wireframes </h3>
+- <h3 id="typography"> Typography </h3>
+    - Google Fonts was used for the following fonts:
+        <br>
+    - Font-family= Cabin - for all the paragraphs and normal text.
+        <br>
+    - Font-family= Roboto Condensed for all headings.
+        <br>
+    - UTF-8 Symbol was used as quiz logo - Atom symbol (Dec - 9883) and for rating section - white star (Dec : 9734) and filled star (Dec - 9733).
+
+- <h3 id="wireframes"> Wireframes </h3>
     To model the quiz and to design the User Interfaces better, Wireframes were created for the website using <a href= "https://balsamiq.com/">Balsamiq</a>.
 
 <h2 id = "features"> FEATURES </h2>
+
 - <h3 id= "landing"> Landing Section </h3>
-    Landing section is the first page view of the quiz to the user. 
-    <img src = "assets/docs/Landing.png" style= "width: 80%;">
+    Landing section is the first page view of the quiz to the user. The section contains header, introduction to the quiz, username input box, a submit button. The details can be found in the picture below.
+    <img src = "assets/docs/Landing.png"; >
+
     - <h3 id= "header"> Header</h3>
         Header consists of a symbol of an atom used as a logo (Unicode UTF-8/Unicode Transformation Format) and name of the quiz "Chem Around Us."
+
     - <h3 id= "introduction"> Introduction Area </h3>
-    The text in the introduction area gives a description of the quiz.
+        The text in the introduction area gives a description of the quiz.
+
     - <h3 id= "username-input"> Username Input Field </h3>
-    Username input area allows the user to enter a username that will later appear as a welcome message in the same page and the name will also appear in the result message area. The validation rules are described here:
-    <img src = "assets/docs/username_validation.png" style= "width: 80%;">
+        Username input area allows the user to enter a username that will later appear as a welcome message in the same page and the name will also appear in the result message area. The validation rules are described here:
+    <img src = "assets/docs/username_validation.png">
+
     - <h3 id= "lets-begin"> Let's Begin Button</h3>
     This button appears when the user submits the valid acceptable username. By clicking this button the quiz section will be rendered visible to the user.
+
 - <h3 id= "quiz"> Quiz Section</h3>
+    Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
+    <img src = "assets/docs/quiz_box_detail.png">
+
     - <h3 id= "question"> Question Area</h3>
-    - <h3 id= "answer"> Answer Area</h3>
+    Each time the next button is clicked, a new question gets loaded onto the quiz-box.
+
+    - <h3 id= "option"> Option Area</h3>
+
+    <img src = "assets/docs/quiz_box.png">
+
     - <h3 id= "next"> Next Button</h3>
+
 - <h3 id= "result"> Results Area </h3>
     - <h3 id= "score"> Score Area</h3>
     - <h3 id= "rating"> Rating</h3>
