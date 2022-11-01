@@ -28,8 +28,8 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     -  Rating
     -  Accessibility
 - TECHNOLOGIES
--  Languages Used
--  Libraries Used
+- Languages Used
+- Libraries Used
 - ISSUES AND FIXES
 - TESTING 
 -  Validation
@@ -52,15 +52,15 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 <h2 id = "ux"> USER EXPERIENCE UX </h2>
 <h3 id = "us"> User Stories </h3>
 
-<h3 id = "first-time">  First Time Visitor Goals</h3>
-- As a student who is looking for a chemistry-based quiz, I want to solve challenges in the quiz that are inspired from academia, so that it helps me learn new concepts.
-- As a student who is looking for a chemistry-based quiz, I want to be given one chance only to click an answer, so that it lets me assess myself well.
-- As a student who is looking for a chemistry-based quiz, I want to get awarded for my efforts and my scores to be evaluated, so that I can assess how good I know the subject.
-- As a student who is looking for a chemistry-based quiz, I wish to be able to rate the quiz, so that I can let the creator know how I felt.
+- <h3 id = "first-time">  First Time Visitor Goals</h3>
+        -  As a student who is looking for a chemistry-based quiz, I want to solve challenges in the quiz that are inspired from academia, so that it helps me learn new concepts. <br>
+        - As a student who is looking for a chemistry-based quiz, I want to be given one chance only to click an answer, so that it lets me assess myself well. <br>
+        - As a student who is looking for a chemistry-based quiz, I want to get awarded for my efforts and my scores to be evaluated, so that I can assess how good I know the subject.<br>
+        - As a student who is looking for a chemistry-based quiz, I wish to be able to rate the quiz, so that I can let the creator know how I felt.
 
-<h3 id="returning"> Returning Visitor Goals</h3>
-- As a student who is revisiting the quiz, I want to be encouraged to play the quiz again and again, so that they I can memorize the contents thoroghly.
-- As a student who is revisiting the quiz, I want to retake the quiz if my scores are low, so that I can try again and learn the answers well.
+- <h3 id="returning"> Returning Visitor Goals</h3>
+        - As a student who is revisiting the quiz, I want to be encouraged to play the quiz again and again, so that they I can memorize the contents thoroghly.
+        - As a student who is revisiting the quiz, I want to retake the quiz if my scores are low, so that I can try again and learn the answers well.
 
 - <h2 id = "design">  Design </h2>
     - <h3 id="quiz-struture">  Quiz Structure </h3>
