@@ -94,7 +94,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
 - <h3 id= "quiz"> Quiz Section</h3>
     The quiz area will initially contain just question and answers. When an option is clicked, a live-score area and the status information gets added to the quiz area. 
-    <img src = "assets/docs/quiz_box.png">
+    <img src = "assets/docs/quiz_before_after.png">
     Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
     <img src = "assets/docs/quiz_box_detail.png">
     
@@ -185,6 +185,7 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
     - Navigate to the 'Pages' tab on the left of the page.
     - Go to the 'Build and deployment' section, select 'Deploy from a branch' in the <i>source</i> dropdown.
     - Select branch 'main' and click on 'Save'.
+    - Deployment link generated: https://roshnavakkeel.github.io/Chem_Around_Us/
 
 - <h3 id= "fork"> Forking Repository on GitHub </h3>
 
