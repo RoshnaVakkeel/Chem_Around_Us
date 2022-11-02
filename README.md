@@ -12,6 +12,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     - <a href= "#quiz"> Quiz Structure</a>
     -  <a href= "#typography">Typography</a>
     -  <a href= "#wireframes">Wireframes</a>
+    -  <a href= "#responsiveness">Responsiveness and Browser Compatibility</a>
 -  <a href= "#features">Features</a>
     -  <a href= "#landing">Landing Section</a>
     -  <a href= "#quiz">Quiz Section</a>
@@ -67,6 +68,13 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     - Font-family= Roboto Condensed for all headings.
         <br>
     - UTF-8 Symbol was used as quiz logo - Atom symbol (Dec - 9883) and for rating section - white star (Dec : 9734) and filled star (Dec - 9733).
+
+- <h3 id="responsiveness"> Responsiveness and Browser Compatibility </h3>
+    - The layout of index.html utilises Flex styling for responsiveness. the pages were manually tested for the responsivenss.
+        <br>
+    - Media queries are used in the website to adjust to the available space on different screen sizes.
+    <br>
+    - The quiz was tested in Google Chrome, Mozilla Firefox, and Microsoft Edge. It works well in all browsers.
 
 - <h3 id="wireframes"> Wireframes </h3>
 
