@@ -94,7 +94,7 @@ p {
 #btn-start {
     background-color: #4b74c0;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 15px 32px;
     text-decoration: none;
     color: white;
@@ -125,22 +125,23 @@ p {
 }
 
 ul {
-    list-style-type:none;
+    list-style-type: none;
 }
+
 #question {
     margin-bottom: 1rem;
     padding-top: 20px;
     margin-left: 20px;
 }
 
-.option button{
+.option button {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     width: 45vw;
     background: lightblue;
     border-radius: 1rem;
     padding: 10px;
-} 
+}
 
 ol {
     padding: 0 4rem;
@@ -210,22 +211,20 @@ ol {
     color: yellow;
 }
 
-
 /* For medium screens sizes from 950px wide and down */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 420px) {
 
+    h1 {
+        font-size: 1.8rem;
+    }
 
-h1 {
-    font-size: 2rem;
-}
+    h2 {
+        font-size: 1.4rem;
+    }
 
-h2 {
-    font-size: 1.4rem;
-}
-
-p {
-    padding: 10px;
-    font-size: 1.2rem;
-    line-height: 20px;
-}
+    p {
+        padding: 10px;
+        font-size: 1rem;
+        line-height: 20px;
+    }
 }

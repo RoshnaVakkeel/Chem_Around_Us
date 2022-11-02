@@ -6,13 +6,11 @@
 let usernameForm = document.getElementById("username-form");
 let usernameButton = document.getElementById("username-submit");
 
-
 usernameButton.addEventListener("click", (e) => {
-    e.preventDefault(); // prevents user from proceeding without input.
+    e.preventDefault();
     let username = usernameForm.username.value;
     let errorMsg = document.getElementById("error-msg");
-    let specialChar = /^[a-zA-Z0-9_]{3,10}$/; // Regex for only alphanumerics allowed, also setting word limit for the username.
-
+    let specialChar = /^[a-zA-Z0-9_]{3,10}$/;
     if (username == null || username == "") {
         errorMsg.classList.remove('hide');
         errorMsg.innerHTML = "Please enter your name!!";
@@ -23,7 +21,7 @@ usernameButton.addEventListener("click", (e) => {
         errorMsg.classList.remove('hide');
         errorMsg.style.color = "green";
         errorMsg.innerHTML = "Hey " + username + " ! Welcome to the Quiz!!";
-        buttonStart.classList.remove('hide'); // Makes the "Let's Begin" button visible. 
+        buttonStart.classList.remove('hide');
     }
 });
 
@@ -39,9 +37,9 @@ let landingSection = document.getElementById('landing');
 buttonStart.addEventListener('click', letsBegin);
 
 function letsBegin() {
-    landingSection.style.display = 'none'; // Makes landing section invisible.
-    quizBox.style.display = 'block'; // Makes quiz-box section visible.
-    loadQuestion(); // Function to update question into quiz-box.
+    landingSection.style.display = 'none';
+    quizBox.style.display = 'block';
+    loadQuestion();
 }
 
 //Questions list for quiz-box (arrays)
@@ -81,12 +79,10 @@ let questionList = [{
 
 let questionNumber = document.getElementById("q-number");
 let optionAll = document.getElementsByClassName('option');
-
 let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
 let option2 = document.getElementById('option2');
 let option3 = document.getElementById('option3');
-
 let i = 0;
 
 function loadQuestion() {
@@ -97,7 +93,7 @@ function loadQuestion() {
     option2.innerHTML = questionList[i].option[2];
     option3.innerHTML = questionList[i].option[3];
 
-    questionNumber.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionList.length; // lets user know which question are they at now.
+    questionNumber.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionList.length;
 }
 
 /**
@@ -108,11 +104,11 @@ let liveScore = document.getElementById("live-score");
 let scoreValue = document.getElementById('score');
 let score = document.getElementById('score');
 let scoreTitle = document.getElementById('score-title');
-let nextbtn =  document.getElementById("btn-next");
+let nextbtn = document.getElementById("btn-next");
 scoreValue = 0;
 
 function scoreCalc(e) {
-    option0.disabled = true; // buttons are disabled the moment click is made, so that user cannot select any other answer.
+    option0.disabled = true;
     option1.disabled = true;
     option2.disabled = true;
     option3.disabled = true;
@@ -121,14 +117,14 @@ function scoreCalc(e) {
     scoreTitle.innerText = "Kudos" + " " + username + "!! Your score is:";
 
     if (e.innerHTML === questionList[i].answer && scoreValue < questionList.length) {
-        document.getElementById(e.id).style.background = 'green'; // if correct answer is chosen.
-          
+        document.getElementById(e.id).style.background = 'green';
+
         document.getElementById("live-score").innerText = ++scoreValue;
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
-        score.innerHTML = scoreValue + '/' + questionList.length; // displays score in the quiz-box.
+        score.innerHTML = scoreValue + '/' + questionList.length;
 
     } else {
-        document.getElementById(e.id).style.background = 'red'; // if wrong answer is chosen.
+        document.getElementById(e.id).style.background = 'red';
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
         score.innerHTML = scoreValue + '/' + questionList.length;
 
@@ -165,7 +161,7 @@ function nextQuestion() {
     }
 }
 
-nextbtn.addEventListener("click", function(){
+nextbtn.addEventListener("click", function () {
     nextQuestion();
 });
 
@@ -175,16 +171,16 @@ nextbtn.addEventListener("click", function(){
 let stars = document.querySelectorAll(".star");
 let userChoice = document.querySelector(".choice");
 
-stars.forEach((star, i) => { // to loop through the stars.
+stars.forEach((star, i) => {
     star.onclick = function () {
-        let selection = i + 1; // to make the index value 1 instead of 0 for the first one.
+        let selection = i + 1;
         userChoice.innerText = `${selection} of 5`;
 
         stars.forEach((star, j) => {
             if (selection >= j + 1) {
-                star.innerHTML = "&#9733"; // filled filled star UTF-8 value
+                star.innerHTML = "&#9733";
             } else {
-                star.innerHTML = "&#9734"; // filled star UTF-8 value
+                star.innerHTML = "&#9734";
             }
         });
     };
