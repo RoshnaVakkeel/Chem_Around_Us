@@ -31,8 +31,6 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     -  <a href= "#wave">WAVE Accessibilty Tool</a>
 -  <a href= "#deployment">Deployment</a>
     -  <a href= "#deploy">Project Deployment on GitHub pages</a>
-    -  <a href= "#fork">Forking Repository on GitHub </a>
-    -  <a href= "#clone">Cloning Repository on GitHub </a>
 -  <a href= "#credits">Credits</a>
     -  <a href= "#content">Content</a>
     - <a href= "#media">Media</a>
@@ -95,11 +93,13 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
 - <h3 id= "quiz"> Quiz Section</h3>
     
-        Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
-        <img src = "assets/docs/quiz_box_detail.png">
+    Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
 
-        The quiz area will initially contain just question and answers. When an option is clicked, a live-score area and the status information gets added to the quiz area. 
-        <img src = "assets/docs/quiz_before_after.png">
+    <img src = "assets/docs/quiz_box_detail.png">
+
+    The quiz area will initially contain just question and answers. When an option is clicked, a live-score area and the status information gets added to the quiz area. 
+
+    <img src = "assets/docs/quiz_before_after.png">
     
     - <h3 id= "question"> Question Area</h3>
         Each time the next button is clicked, a new question gets loaded onto the quiz-box.
@@ -107,34 +107,43 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     - <h3 id= "option"> Option Area</h3>
         Each question has 4 choices for the user to select from. User is allowed to click on only one option. Once the selection is made, the other buttons will become inactive. The correct answer will appear as green button and wrong one in red color. Even is the rong answer is clicked the correct answer will appear in green color in oredr to guide the user to the right answer. The live score span will also appear above the question and a status of question will appear at the bottom of the box.
         Each correct answer increments the score by the value of 1.
+
         <img src = "assets/docs/selection.png">
     
     - <h3 id= "next"> Next Button</h3>
         Next button when clicked loads a new set of options with a next question.
 
 - <h3 id= "result"> Results Area </h3>
+
     After the user makes the selection of option of the last question, the result area will appear on the screen. The details are provided in the image below. A message containing the username will appear in the result area.
+
     <img src = "assets/docs/result_detail.png">
 
     - <h3 id= "score"> Score Area</h3>
     Final score will appear in this area. If user skips all selection, a message to make selection will appear in the same position.
 
     - <h3 id= "rating"> Rating</h3>
+
     This area contains 5 white star symbols. User can click on their preferred number olloing which the selected stars will appear filled and a rating score will appear below.
+
     <img src = "assets/docs/rating.png">
 
     - <h3 id= "back"> Back to Quiz Button</h3>
+
     This button is a reset type button. The user lands on the first landing page upon clicking it.
     
 - <h3 id= "accessibility"> Accessibility</h3>
+
     The quiz is rendered accessible as much as possible by using semantic HTML elements, providing adequate contrast to the fonts. To further ensure that the site is accessible tests with the Web Accessibility Evaluation Tool (WAVE) were conducted.
 
 <h2 id="technologies">TECHNOLOGIES</h2>
 
 <h3 id= "languages"> Languages Used</h3>
+
 This quiz is created  using HTML5, CSS3 and JavaScript.
 
 <h3 id= "libraries"> Libraries Used</h3>
+
 - Git - For version control
 - GitHub - To create my repositories, save and store my project files
 - Google Fonts - To import fonts
@@ -155,33 +164,47 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
 - Function Implementation
 
 1. In quiz section, initially I provided spans to enter the options. But upon answer selection, the other options still remain clickable. So, the spans were then changed to buttons, as they allow the coder to implement - button "disabled" option. Using the code "option0.disabled = true" (similarly for all options),all the buttons are disabled the exact moment click is made, so that user can only make single selection and cannot select any other answer.
+<br>
 2. Second most troublesome issue I faced was once an option selection was made, the changes carried over to the next quiz-box options as well. The changes made would not revert to original. I solved it using the codes in the nextQuestion function:
 function nextQuestion() {
     option0.disabled = false; // buttons for selection are enabled so that the user can make a choice.
-    option0.style.background = 'lightblue'; // buttons are reset to the original colour, so that the changes made do not carry over.}. 
+    option0.style.background = 'lightblue'; // buttons are reset to the original colour, so that the changes made do not carry over.}. <br>
 All the buttons were given similar logical conditions to each option button.
+<br>
 3. The third most challenging task was to get the correct answer appear green, even if the user selects the wrong answer and both the selcted wrong answer and the ecpected selecetd answer must appear on screen together. With my mentor's help, this issue was solved. By creating a new variable called options and was accessed using document.getElementById("options") from HTML . The correct option "correctChild" was located from the array and the correctChild/ correct option was given the color green. These codes were used to get the function to be executed:
 let correctChild = Array.from(options.children).find(child => child.innerText === questionList[i].answer);
+<br>
 correctChild.firstChild.style.background = 'green';
+<br>
+This piece of code makes the correct answer appear green even with or without user clicking on it.
     
-
 <h2 id="testing">TESTING </h2>
 
 - <h3 id= "validation"> Validation</h3>
 
     - <h3 id= "w3c-html"> W3C Validator (HTML)</h3>
-    To test compliance with HTML standards, the <a href= "https://validator.w3.org/">W3C Markup Validation Service</a> was used.
-    Result of index.html validation: <strong> No errors found. </strong>
 
-    <img src= "assets/docs/W3C_validatior_HTML.png" >
+        To test compliance with HTML standards, the <a href= "https://validator.w3.org/">W3C Markup Validation Service</a> was used.
+        Result of index.html validation: <strong> No errors found. </strong>
+
+        <img src= "assets/docs/W3C_validatior_HTML.png" >
 
     - <h3 id= "w3c-css"> W3C Jigsaw Validator (CSS)</h3>
-    To test compliance with HTML standards, the <a href= "https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service - Jigsaw</a> was used.
+
+        To test compliance with HTML standards, the <a href= "https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service - Jigsaw</a> was used.
     <br>
-    Result of CSS validation: <strong>No errors found.</strong>
+        Result of CSS validation: <strong>No errors found.</strong>
+
     <img src= "assets/docs/W3C_Jigsaw_validator_CSS.png">
 
     - <h3 id= "jshint"> JSHint (Javascript)</h3>
+
+        <a href= "https://jshint.com/about/">JSHint</a>, which is a static Code Analysis Tool for JavaScript, was used to test compliance with JavaSCript standards.
+
+        Result of JSHint validation: 
+    
+    <img src= "assets/docs/JSHint_report.png">
+
 
 <h2 id="performance">PERFORMANCE </h2>
 
@@ -197,17 +220,15 @@ correctChild.firstChild.style.background = 'green';
 
 <h2 id="deployment">DEPLOYMENT </h2>
 
-- <h3 id= "deploy"> Project Deployment on GitHub pages</h3>
+<h3 id= "deploy"> Project Deployment on GitHub pages</h3>
+
     GitHub pages were used to deploy the site. The steps to activate Github pages:
-    - Navigate to the <i>Settings</i> tab in the GitHub repository.
-    - Navigate to the 'Pages' tab on the left of the page.
-    - Go to the 'Build and deployment' section, select 'Deploy from a branch' in the <i>source</i> dropdown.
-    - Select branch 'main' and click on 'Save'.
-    - Deployment link generated: https://roshnavakkeel.github.io/Chem_Around_Us/
 
-- <h3 id= "fork"> Forking Repository on GitHub </h3>
-
-- <h3 id= "clone"> Cloning Repository on GitHub </h3>
+- Navigate to the <i>Settings</i> tab in the GitHub repository.
+- Navigate to the 'Pages' tab on the left of the page.
+- Go to the 'Build and deployment' section, select 'Deploy from a branch' in the <i>source</i> dropdown.
+- Select branch 'main' and click on 'Save'.
+- Deployment link generated: https://roshnavakkeel.github.io/Chem_Around_Us/
 
 <h2 id= "credits"> CREDITS </h2>
 
@@ -215,15 +236,17 @@ correctChild.firstChild.style.background = 'green';
     The fonts are imported from Google Fonts.
     <br>
     A few references used for JS coding:
-    1. <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> Form username input</a>
+
+    - <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> Form username input</a>
     <br>
-    2. <a href = "https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value."> "Back to start" button Reset function.</a>
+    - <a href = "https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value."> "Back to start" button Reset function.</a>
     <br>
-    3. Stack overflow to get better queries to solve multiple doubts. For eg. Regex code to validate username input.
+    - Stack overflow to get better queries to solve multiple doubts. For eg. Regex code to validate username input.
     <br>
-    4. Slack community online - especially to solve the JSHint warnings. It was done using going to Configurations>Assume>New JavaScript features (ES6) selection.
+    - Slack community online - especially to solve the JSHint warnings. It was done using going to Configurations>Assume>New JavaScript features (ES6) selection.
 
 - <h3 id= "media"> Media</h3>
+
     - Youtube videos were referred to in order to understand and clarify many functions.
     <br>
     - <a href = "https://www.youtube.com/watch?v=JQ-wmaarWTQ"> arrays for the quiz</a>.
