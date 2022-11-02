@@ -15,7 +15,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 -  <a href= "#features">Features</a>
     -  <a href= "#landing">Landing Section</a>
     -  <a href= "#quiz">Quiz Section</a>
-    -  <a href= "#result">Result Area </a>
+    -  <a href= "#result">Result Section </a>
     -  <a href= "#accessibilty">Accessibility</a>
 - <a href= "#technologies">Technologies</a>
 - <a href= "#languages">Languages Used</a>
@@ -69,27 +69,36 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     - UTF-8 Symbol was used as quiz logo - Atom symbol (Dec - 9883) and for rating section - white star (Dec : 9734) and filled star (Dec - 9733).
 
 - <h3 id="wireframes"> Wireframes </h3>
-    To model the quiz and to design the User Interfaces better, Wireframes were created for the website using <a href= "https://balsamiq.com/">Balsamiq</a>.    
+
+    To model the quiz and to design the User Interfaces better, Wireframes were created for the website using <a href= "https://balsamiq.com/">Balsamiq</a>.  
+
     <img src = "assets/docs/wireframe.png">
 
 <h2 id = "features"> FEATURES </h2>
 
 - <h3 id= "landing"> Landing Section </h3>
+
     Landing section is the first page view of the quiz to the user. The section contains header, introduction to the quiz, username input box, a submit button. The details can be found in the picture below.
+
     <img src = "assets/docs/Landing.png">
 
     - <h3 id= "header"> Header</h3>
+
         Header consists of a symbol of an atom used as a logo (Unicode UTF-8/Unicode Transformation Format) and name of the quiz "Chem Around Us."
 
     - <h3 id= "introduction"> Introduction Area </h3>
         The text in the introduction area gives a description of the quiz.
 
     - <h3 id= "username-input"> Username Input Field </h3>
+
         Username input area allows the user to enter a username that will later appear as a welcome message in the same page and the name will also appear in the result message area. The validation rules are described here:
+
     <img src = "assets/docs/username_validation.png">
 
     - <h3 id= "lets-begin"> Let's Begin Button</h3>
-    This button appears when the user submits the valid acceptable username. By clicking this button the quiz section will be rendered visible to the user.
+
+        This button appears when the user submits the valid acceptable username. By clicking this button the quiz section will be rendered visible to the user.
+        <br>
 
 - <h3 id= "quiz"> Quiz Section</h3>
     
@@ -105,15 +114,15 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
         Each time the next button is clicked, a new question gets loaded onto the quiz-box.
 
     - <h3 id= "option"> Option Area</h3>
-        Each question has 4 choices for the user to select from. User is allowed to click on only one option. Once the selection is made, the other buttons will become inactive. The correct answer will appear as green button and wrong one in red color. Even is the rong answer is clicked the correct answer will appear in green color in oredr to guide the user to the right answer. The live score span will also appear above the question and a status of question will appear at the bottom of the box.
+        Each question has 4 choices for the user to select from. User is allowed to click on only one option. Once the selection is made, the other buttons will become inactive. The correct answer will appear as green button and wrong one in red color. Even is the rong answer is clicked the correct answer will appear in green color in order to guide the user to the right answer. The live score span will also appear above the question and a status of question will appear at the bottom of the box.
         Each correct answer increments the score by the value of 1.
 
         <img src = "assets/docs/selection.png">
     
     - <h3 id= "next"> Next Button</h3>
         Next button when clicked loads a new set of options with a next question.
-
-- <h3 id= "result"> Results Area </h3>
+        <br>
+- <h3 id= "result"> Results Section </h3>
 
     After the user makes the selection of option of the last question, the result area will appear on the screen. The details are provided in the image below. A message containing the username will appear in the result area.
 
@@ -124,7 +133,7 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
 
     - <h3 id= "rating"> Rating</h3>
 
-    This area contains 5 white star symbols. User can click on their preferred number olloing which the selected stars will appear filled and a rating score will appear below.
+    This area contains 5 white star symbols. User can click on their preferred number following which the selected stars will appear filled and a rating score will appear below.
 
     <img src = "assets/docs/rating.png">
 
@@ -145,7 +154,9 @@ This quiz is created  using HTML5, CSS3 and JavaScript.
 <h3 id= "libraries"> Libraries Used</h3>
 
 - Git - For version control
+
 - GitHub - To create my repositories, save and store my project files
+
 - Google Fonts - To import fonts
 - Font Awesome - For the iconography used in footer and links
 - Google Dev Tools - To debug, troubleshoot and test features and adjust property values. Using the  Lighthouse extension installed in Chrome Browser, the performance report was generated.
@@ -165,12 +176,14 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
 
 1. In quiz section, initially I provided spans to enter the options. But upon answer selection, the other options still remain clickable. So, the spans were then changed to buttons, as they allow the coder to implement - button "disabled" option. Using the code "option0.disabled = true" (similarly for all options),all the buttons are disabled the exact moment click is made, so that user can only make single selection and cannot select any other answer.
 <br>
+
 2. Second most troublesome issue I faced was once an option selection was made, the changes carried over to the next quiz-box options as well. The changes made would not revert to original. I solved it using the codes in the nextQuestion function:
-function nextQuestion() {
+    function nextQuestion() {
     option0.disabled = false; // buttons for selection are enabled so that the user can make a choice.
     option0.style.background = 'lightblue'; // buttons are reset to the original colour, so that the changes made do not carry over.}. <br>
 All the buttons were given similar logical conditions to each option button.
 <br>
+
 3. The third most challenging task was to get the correct answer appear green, even if the user selects the wrong answer and both the selcted wrong answer and the ecpected selecetd answer must appear on screen together. With my mentor's help, this issue was solved. By creating a new variable called options and was accessed using document.getElementById("options") from HTML . The correct option "correctChild" was located from the array and the correctChild/ correct option was given the color green. These codes were used to get the function to be executed:
 let correctChild = Array.from(options.children).find(child => child.innerText === questionList[i].answer);
 <br>
@@ -205,6 +218,13 @@ This piece of code makes the correct answer appear green even with or without us
     
     <img src= "assets/docs/JSHint_report.png">
 
+    Metrics state that: 
+    - There are 11 functions in this file.
+    - Function with the largest signature take 2 arguments, while the median is 1.
+    - Largest function has 17 statements in it, while the median is 3.
+    - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+    - According to the report, there is One unused variable "scoreCalc". I tried to change it but ue to the complexity of function, I couldn't fix it.
+
 
 <h2 id="performance">PERFORMANCE </h2>
 
@@ -216,7 +236,7 @@ This piece of code makes the correct answer appear green even with or without us
 - <h3 id= "wave"> WAVE Accessibilty Tool</h3>
      WAVE chrome extension is used to evaluate accessibility of the web content. WAVE did not report any errors or contrast errors. <br>
 
-    <img src= "assets/docs/WAVE_test.png" style= "width: 60%;">
+    <img src= "assets/docs/WAVE_test.png" style= "width: 50%;">
 
 <h2 id="deployment">DEPLOYMENT </h2>
 

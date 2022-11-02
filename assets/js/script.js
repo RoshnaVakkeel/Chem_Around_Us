@@ -142,8 +142,8 @@ let result = document.getElementById('result');
 let resultArea = document.getElementById('result-area');
 
 function nextQuestion() {
-    option0.disabled = false; // buttons for selection are enabled so that the user can make a choice.
-    option0.style.background = 'lightblue'; // buttons are reset to the original colour, so that the changes made do not carry over.
+    option0.disabled = false; 
+    option0.style.background = 'lightblue'; 
     option1.disabled = false;
     option1.style.background = 'lightblue';
     option2.disabled = false;
@@ -156,7 +156,7 @@ function nextQuestion() {
         loadQuestion();
     } else {
         quizBox.style.display = 'none';
-        result.classList.remove('hide'); // if the loop reaches the last question, upon clicking Next button, result area is made visible.
+        result.classList.remove('hide'); 
         resultArea.style.display = 'block';
     }
 }
