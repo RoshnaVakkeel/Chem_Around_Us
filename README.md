@@ -94,16 +94,18 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     This button appears when the user submits the valid acceptable username. By clicking this button the quiz section will be rendered visible to the user.
 
 - <h3 id= "quiz"> Quiz Section</h3>
-    The quiz area will initially contain just question and answers. When an option is clicked, a live-score area and the status information gets added to the quiz area. 
-    <img src = "assets/docs/quiz_before_after.png">
-    Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
-    <img src = "assets/docs/quiz_box_detail.png">
+    
+        Quiz section contains header that is consistent with the landing section. The area is divided into the categories as shown below.
+        <img src = "assets/docs/quiz_box_detail.png">
+
+        The quiz area will initially contain just question and answers. When an option is clicked, a live-score area and the status information gets added to the quiz area. 
+        <img src = "assets/docs/quiz_before_after.png">
     
     - <h3 id= "question"> Question Area</h3>
         Each time the next button is clicked, a new question gets loaded onto the quiz-box.
 
     - <h3 id= "option"> Option Area</h3>
-        Each question has 4 choices for the user to select from. User is allowed to click on only one option. Once the selection is made, the other buttons will become inactive. The correct answer will appear as green button and wrong one in red color. The live score span will appear above the question and a status of question will appear at the bottom of the box.
+        Each question has 4 choices for the user to select from. User is allowed to click on only one option. Once the selection is made, the other buttons will become inactive. The correct answer will appear as green button and wrong one in red color. Even is the rong answer is clicked the correct answer will appear in green color in oredr to guide the user to the right answer. The live score span will also appear above the question and a status of question will appear at the bottom of the box.
         Each correct answer increments the score by the value of 1.
         <img src = "assets/docs/selection.png">
     
@@ -141,12 +143,27 @@ This quiz is created  using HTML5, CSS3 and JavaScript.
 
 <h2 id="issues">ISSUES AND FIXES </h2>
 
+- Design Implementation
+
 1. My initial plan involved superposing each page on one another. But as there are buttons in different pages, it got confusing and styling became very complicated, So, to remove the confusion, I introduced an additional page named "questions.html". From the index.html, the page was  linked using "action" tag. Clicking on which, user would directly get to the questions page. 
 After recieving Mentor's suggestion on keeping no additional page and it is better in the initial stage to have a single html file i.e. "index.html". I copied all the codes from "questions.html" and pasted it to the "index.html" file. But there was an overlap of the sections, as I had provided style to #landing {position: absolute;} earlier. That was then changed to  #landing {position: relative;} and the overlapping or super position was solved.
 
 2. Another change from the initial designs implemented were: removal of "Previous" button as the function implementation was going to be difficult as the data storage step would be involved.
 
 3. Styling of each div was made easy using flexboxes so that respinsiveness could be easily implemented. Initially all the divs were placed on the same page as per to document flow. In order to make it superpose one above the other. The class attribute named "hide" was introduced with display set to none to the sections "quiz-box" and "result". When we aspire to display the desired section, we could turn its display on using JavaScript "quizBox.classList.remove('hide'). The other method used to hide the previous section is "quizBox.style.display = 'none';".
+
+- Function Implementation
+
+1. In quiz section, initially I provided spans to enter the options. But upon answer selection, the other options still remain clickable. So, the spans were then changed to buttons, as they allow the coder to implement - button "disabled" option. Using the code "option0.disabled = true" (similarly for all options),all the buttons are disabled the exact moment click is made, so that user can only make single selection and cannot select any other answer.
+2. Second most troublesome issue I faced was once an option selection was made, the changes carried over to the next quiz-box options as well. The changes made would not revert to original. I solved it using the codes in the nextQuestion function:
+function nextQuestion() {
+    option0.disabled = false; // buttons for selection are enabled so that the user can make a choice.
+    option0.style.background = 'lightblue'; // buttons are reset to the original colour, so that the changes made do not carry over.}. 
+All the buttons were given similar logical conditions to each option button.
+3. The third most challenging task was to get the correct answer appear green, even if the user selects the wrong answer and both the selcted wrong answer and the ecpected selecetd answer must appear on screen together. With my mentor's help, this issue was solved. By creating a new variable called options and was accessed using document.getElementById("options") from HTML . The correct option "correctChild" was located from the array and the correctChild/ correct option was given the color green. These codes were used to get the function to be executed:
+let correctChild = Array.from(options.children).find(child => child.innerText === questionList[i].answer);
+correctChild.firstChild.style.background = 'green';
+    
 
 <h2 id="testing">TESTING </h2>
 
@@ -196,13 +213,22 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
 
 - <h3 id= "content"> Content</h3>
     The fonts are imported from Google Fonts.
-    A few references for coding:
-    1. <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> For username input</a>
-    2. 
+    <br>
+    A few references used for JS coding:
+    1. <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> Form username input</a>
+    <br>
+    2. <a href = "https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value."> "Back to start" button Reset function.</a>
+    <br>
+    3. Stack overflow to get better queries to solve multiple doubts. For eg. Regex code to validate username input.
+    <br>
+    4. Slack community online - especially to solve the JSHint warnings. It was done using going to Configurations>Assume>New JavaScript features (ES6) selection.
 
 - <h3 id= "media"> Media</h3>
     - Youtube videos were referred to in order to understand and clarify many functions.
-    - <a href = ""></a>
+    <br>
+    - <a href = "https://www.youtube.com/watch?v=JQ-wmaarWTQ"> arrays for the quiz</a>.
+    <br>
+    - <a href = "https://www.youtube.com/watch?v=2jwdyO_UunE"> for quiz functions like load question and score calculation</a>.
 
 
 <h2 id= "acknowledgements"> ACKNOWLEDGEMENTS </h2>
