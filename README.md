@@ -71,13 +71,14 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
     - UTF-8 Symbol was used as quiz logo - Atom symbol (Dec - 9883) and for rating section - white star (Dec : 9734) and filled star (Dec - 9733).
 
 - <h3 id="wireframes"> Wireframes </h3>
-    To model the quiz and to design the User Interfaces better, Wireframes were created for the website using <a href= "https://balsamiq.com/">Balsamiq</a>.
+    To model the quiz and to design the User Interfaces better, Wireframes were created for the website using <a href= "https://balsamiq.com/">Balsamiq</a>.    
+    <img src = "assets/docs/wireframe.png">
 
 <h2 id = "features"> FEATURES </h2>
 
 - <h3 id= "landing"> Landing Section </h3>
     Landing section is the first page view of the quiz to the user. The section contains header, introduction to the quiz, username input box, a submit button. The details can be found in the picture below.
-    <img src = "assets/docs/Landing.png"; >
+    <img src = "assets/docs/Landing.png">
 
     - <h3 id= "header"> Header</h3>
         Header consists of a symbol of an atom used as a logo (Unicode UTF-8/Unicode Transformation Format) and name of the quiz "Chem Around Us."
