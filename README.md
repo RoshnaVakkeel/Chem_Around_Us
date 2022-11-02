@@ -173,8 +173,9 @@ After recieving Mentor's suggestion on keeping no additional page and it is bett
     <img src= "assets/docs/Lighthouse_test.png">
 
 - <h3 id= "wave"> WAVE Accessibilty Tool</h3>
-    WAVE did not report any errors or contrast errors.
-    <img src= "assets/docs/WAVE_test.png">
+     WAVE chrome extension is used to evaluate accessibility of the web content. WAVE did not report any errors or contrast errors. <br>
+
+    <img src= "assets/docs/WAVE_test.png" style= "width: 60%;">
 
 <h2 id="deployment">DEPLOYMENT </h2>
 

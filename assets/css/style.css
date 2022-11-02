@@ -130,14 +130,16 @@ ul {
 #question {
     margin-bottom: 1rem;
     padding-top: 20px;
+    margin-left: 20px;
 }
 
 .option button{
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    width: 20rem;
+    width: 45vw;
     background: lightblue;
     border-radius: 1rem;
+    padding: 10px;
 } 
 
 ol {

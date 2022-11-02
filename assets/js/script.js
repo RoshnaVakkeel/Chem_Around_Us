@@ -108,6 +108,7 @@ let liveScore = document.getElementById("live-score");
 let scoreValue = document.getElementById('score');
 let score = document.getElementById('score');
 let scoreTitle = document.getElementById('score-title');
+let nextbtn =  document.getElementById("btn-next");
 scoreValue = 0;
 
 function scoreCalc(e) {
@@ -121,7 +122,7 @@ function scoreCalc(e) {
 
     if (e.innerHTML === questionList[i].answer && scoreValue < questionList.length) {
         document.getElementById(e.id).style.background = 'green'; // if correct answer is chosen.
-
+          
         document.getElementById("live-score").innerText = ++scoreValue;
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
         score.innerHTML = scoreValue + '/' + questionList.length; // displays score in the quiz-box.
@@ -130,6 +131,10 @@ function scoreCalc(e) {
         document.getElementById(e.id).style.background = 'red'; // if wrong answer is chosen.
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
         score.innerHTML = scoreValue + '/' + questionList.length;
+
+        let options = document.getElementById("options");
+        let correctChild = Array.from(options.children).find(child => child.innerText === questionList[i].answer);
+        correctChild.firstChild.style.background = 'green';
     }
 }
 
@@ -159,6 +164,10 @@ function nextQuestion() {
         resultArea.style.display = 'block';
     }
 }
+
+nextbtn.addEventListener("click", function(){
+    nextQuestion();
+});
 
 /**
  * Function for rating by the user.
