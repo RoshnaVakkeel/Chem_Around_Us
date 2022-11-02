@@ -3,13 +3,13 @@
  * Adds validation to username input field. 
  */
 
-let usernameForm = document.getElementById("username-form");
-let usernameButton = document.getElementById("username-submit");
+let usernameForm = document.getElementById('username-form');
+let usernameButton = document.getElementById('username-submit');
 
 usernameButton.addEventListener("click", (e) => {
     e.preventDefault();
     let username = usernameForm.username.value;
-    let errorMsg = document.getElementById("error-msg");
+    let errorMsg = document.getElementById('error-msg');
     let specialChar = /^[a-zA-Z0-9_]{3,10}$/;
     if (username == null || username == "") {
         errorMsg.classList.remove('hide');
@@ -30,7 +30,7 @@ usernameButton.addEventListener("click", (e) => {
  * Function to load questions into the "quiz-box" section.
  */
 
-let buttonStart = document.getElementById("btn-start");
+let buttonStart = document.getElementById('btn-start');
 let quizBox = document.getElementById('quiz-box');
 let landingSection = document.getElementById('landing');
 
@@ -77,7 +77,7 @@ let questionList = [{
  * Loads questions in the quiz-box.
  */
 
-let questionNumber = document.getElementById("q-number");
+let questionNumber = document.getElementById('q-number');
 let optionAll = document.getElementsByClassName('option');
 let option0 = document.getElementById('option0');
 let option1 = document.getElementById('option1');
@@ -100,11 +100,11 @@ function loadQuestion() {
  * Function to select answers and calculate scores.
  * Sets conditions for the buttons.
  */
-let liveScore = document.getElementById("live-score");
+let liveScore = document.getElementById('live-score');
 let scoreValue = document.getElementById('score');
 let score = document.getElementById('score');
 let scoreTitle = document.getElementById('score-title');
-let nextbtn = document.getElementById("btn-next");
+let nextbtn = document.getElementById('btn-next');
 scoreValue = 0;
 
 function scoreCalc(e) {
@@ -128,7 +128,7 @@ function scoreCalc(e) {
         liveScore.innerHTML = "score:" + scoreValue + '/' + questionList.length;
         score.innerHTML = scoreValue + '/' + questionList.length;
 
-        let options = document.getElementById("options");
+        let options = document.getElementById('options');
         let correctChild = Array.from(options.children).find(child => child.innerText === questionList[i].answer);
         correctChild.firstChild.style.background = 'green';
     }
@@ -168,8 +168,8 @@ nextbtn.addEventListener("click", function () {
 /**
  * Function for rating by the user.
  */
-let stars = document.querySelectorAll(".star");
-let userChoice = document.querySelector(".choice");
+let stars = document.querySelectorAll('.star');
+let userChoice = document.querySelector('.choice');
 
 stars.forEach((star, i) => {
     star.onclick = function () {
