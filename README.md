@@ -232,8 +232,8 @@ This piece of code makes the correct answer appear green even with or without us
     - Function with the largest signature take 2 arguments, while the median is 1.
     - Largest function has 17 statements in it, while the median is 3.
     - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
-    - According to the report, there is One unused variable "scoreCalc". I tried to change it but ue to the complexity of function, I couldn't fix it.
-
+    - <strong>There are no errors or warnings.</strong>
+    - According to the report, there is One unused variable "scoreCalc". It is actually a function name that I introduced. I found information that instead of defining a onclick function in index.html, one should add a event Listener in script.js instead. The scoreCalc function runs on 4 different buttons. I tried to change it and try, but due to its complexity, I couldn't fix it.
 
 <h2 id="performance">PERFORMANCE </h2>
 
@@ -250,8 +250,7 @@ This piece of code makes the correct answer appear green even with or without us
 <h2 id="deployment">DEPLOYMENT </h2>
 
 <h3 id= "deploy"> Project Deployment on GitHub pages</h3>
-
-    GitHub pages were used to deploy the site. The steps to activate Github pages:
+GitHub pages were used to deploy the site. The steps to activate Github pages:
 
 - Navigate to the <i>Settings</i> tab in the GitHub repository.
 - Navigate to the 'Pages' tab on the left of the page.
@@ -262,25 +261,21 @@ This piece of code makes the correct answer appear green even with or without us
 <h2 id= "credits"> CREDITS </h2>
 
 - <h3 id= "content"> Content</h3>
-    The fonts are imported from Google Fonts.
+The fonts are imported from Google Fonts.
     <br>
-    A few references used for JS coding:
-
-    - <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> Form username input</a>
-    <br>
-    - <a href = "https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value."> "Back to start" button Reset function.</a>
-    <br>
-    - Stack overflow to get better queries to solve multiple doubts. For eg. Regex code to validate username input.
-    <br>
-    - Slack community online - especially to solve the JSHint warnings. It was done using going to Configurations>Assume>New JavaScript features (ES6) selection.
+A few references used for JS coding:
+- <a href = "https://medium.com/swlh/how-to-create-your-first-login-page-with-html-css-and-javascript-602dd71144f1"> Form username input</a><br>
+- <a href = "https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value."> "Back to start" button Reset function.</a><br>
+- Stack overflow to get better queries to solve multiple doubts. For eg. Regex code to validate username input.<br>
+- Slack community online - especially to solve the JSHint warnings. It was done using going to Configurations>Assume>New JavaScript features (ES6) selection.
 
 - <h3 id= "media"> Media</h3>
 
-    - Youtube videos were referred to in order to understand and clarify many functions.
+- Youtube videos were referred to in order to understand and clarify many functions.
     <br>
-    - <a href = "https://www.youtube.com/watch?v=JQ-wmaarWTQ"> arrays for the quiz</a>.
+- <a href = "https://www.youtube.com/watch?v=JQ-wmaarWTQ"> arrays for the quiz</a>.
     <br>
-    - <a href = "https://www.youtube.com/watch?v=2jwdyO_UunE"> for quiz functions like load question and score calculation</a>.
+- <a href = "https://www.youtube.com/watch?v=2jwdyO_UunE"> for quiz functions like load question and score calculation</a>.
 
 
 <h2 id= "acknowledgements"> ACKNOWLEDGEMENTS </h2>
