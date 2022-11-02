@@ -74,7 +74,8 @@ A chemistry based informative Quiz for all. The inspiration is to provide a smal
         <br>
     - Media queries are used in the website to adjust to the available space on different screen sizes.
     <br>
-    - The quiz was tested in Google Chrome, Mozilla Firefox, and Microsoft Edge. It works well in all browsers.
+    - The quiz was tested in Google Chrome and Microsoft Edge. It works well in these browsers. 
+    Mozilla Firefox shows compatibility issues.
 
 - <h3 id="wireframes"> Wireframes </h3>
 
